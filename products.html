@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Products | LocalMistry — Professional Tools & Service Packages</title>
+  <meta name="description" content="Shop professional-grade home service tools, kits, and packages on LocalMistry. Electrical kits, plumbing tools, cleaning packages, CCTV systems and more." />
+  <meta name="keywords" content="home service products, electrical kit, plumbing tools, cleaning package, CCTV setup, carpenter tools, LocalMistry shop" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+  <link rel="shortcut icon" href="images/favicon.ico" />
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#0a1f5c', dark: '#061244', light: '#1a3a8f' },
+            gold: { DEFAULT: '#f5a623', light: '#fbbf24', dark: '#d97706' },
+            sky:  '#e8f0fe',
+          },
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+        }
+      }
+    };
+  </script>
+
+  <style>
+    :focus-visible { outline: 3px solid #f5a623; outline-offset: 3px; }
+
+    /* ── scrollbar ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-thumb { background: #f5a623; border-radius: 99px; }
+
+    /* ── Tab filter ── */
+    .tab-btn {
+      position: relative;
+      padding: .5rem 1.25rem;
+      font-size: .8125rem;
+      font-weight: 600;
+      border-radius: 9999px;
+      border: 1.5px solid transparent;
+      color: #64748b;
+      background: transparent;
+      cursor: pointer;
+      transition: color .22s, background .22s, border-color .22s, transform .18s;
+      white-space: nowrap;
+    }
+    .tab-btn:hover { color: #f5a623; border-color: #f5a623; transform: translateY(-1px); }
+    .tab-btn.active {
+      background: #f5a623;
+      color: #fff;
+      border-color: #f5a623;
+      box-shadow: 0 6px 20px rgba(245,166,35,.35);
+    }
+    .dark .tab-btn { color: #94a3b8; }
+    .dark .tab-btn:hover { color: #f5a623; }
+
+    /* ── Product card ── */
+    .p-card {
+      position: relative;
+      border-radius: 1.25rem;
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 12px rgba(10,31,92,.06);
+      transition: transform .34s cubic-bezier(.34,1.56,.64,1),
+                  box-shadow .34s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .dark .p-card { background: #1e293b; border-color: #334155; }
+
+    .p-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 28px 56px rgba(10,31,92,.2);
+    }
+
+    /* image area */
+    .p-card .img-wrap {
+      position: relative;
+      overflow: hidden;
+      background: #eef2ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 180px;
+    }
+    .dark .p-card .img-wrap { background: #0f172a; }
+
+    .p-card .img-wrap svg {
+      transition: transform .42s cubic-bezier(.34,1.3,.64,1), filter .42s ease;
+    }
+    .p-card:hover .img-wrap svg {
+      transform: scale(1.2) rotate(-5deg);
+      filter: drop-shadow(0 8px 16px rgba(245,166,35,.4));
+    }
+
+    /* hover overlay */
+    .p-card .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(10,31,92,.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity .28s ease;
+      backdrop-filter: blur(2px);
+    }
+    .p-card:hover .overlay { opacity: 1; }
+
+    .p-card .overlay a {
+      transform: translateY(14px) scale(.9);
+      transition: transform .3s cubic-bezier(.34,1.56,.64,1) .05s,
+                  opacity .3s ease .05s;
+      opacity: 0;
+    }
+    .p-card:hover .overlay a { transform: translateY(0) scale(1); opacity: 1; }
+
+    /* ── Grid filter animation ── */
+    .p-card {
+      animation: cardIn .38s cubic-bezier(.34,1.3,.64,1) both;
+    }
+    @keyframes cardIn {
+      from { opacity: 0; transform: translateY(24px) scale(.95); }
+      to   { opacity: 1; transform: translateY(0)    scale(1);   }
+    }
+
+    /* hide / show during filter */
+    .p-card.hidden-card {
+      display: none;
+    }
+    .p-card.show-card {
+      animation: cardIn .38s cubic-bezier(.34,1.3,.64,1) both;
+    }
+
+    /* stagger delays for initial load */
+    .p-card:nth-child(1)  { animation-delay: .05s; }
+    .p-card:nth-child(2)  { animation-delay: .10s; }
+    .p-card:nth-child(3)  { animation-delay: .15s; }
+    .p-card:nth-child(4)  { animation-delay: .20s; }
+    .p-card:nth-child(5)  { animation-delay: .25s; }
+    .p-card:nth-child(6)  { animation-delay: .30s; }
+    .p-card:nth-child(7)  { animation-delay: .35s; }
+    .p-card:nth-child(8)  { animation-delay: .40s; }
+    .p-card:nth-child(9)  { animation-delay: .45s; }
+    .p-card:nth-child(10) { animation-delay: .50s; }
+    .p-card:nth-child(11) { animation-delay: .55s; }
+    .p-card:nth-child(12) { animation-delay: .60s; }
+
+    /* ── wishlist pulse ── */
+    @keyframes heartPop {
+      0%   { transform: scale(1); }
+      40%  { transform: scale(1.45); }
+      70%  { transform: scale(.9); }
+      100% { transform: scale(1); }
+    }
+    .heart-pop { animation: heartPop .38s ease forwards; }
+
+    /* badge */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: .625rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: .2rem .65rem;
+      border-radius: 9999px;
+    }
+
+    /* ── Hero banner ── */
+    .products-hero {
+      background: linear-gradient(135deg, #0a1f5c 0%, #1a3a8f 60%, #0a1f5c 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .products-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 80% at 80% 50%, rgba(245,166,35,.18) 0%, transparent 70%);
+    }
+
+    /* ── Page loader bar ── */
+    #loader {
+      position: fixed;
+      top: 0; left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #f5a623, #fbbf24);
+      z-index: 9999;
+      animation: loadBar .8s ease forwards;
+    }
+    @keyframes loadBar {
+      from { width: 0; }
+      to   { width: 100%; opacity: 0; }
+    }
+
+    /* ── Result count badge ── */
+    #result-count {
+      transition: opacity .2s ease;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration:.01ms !important; transition-duration:.01ms !important; }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-slate-800 font-sans antialiased dark:bg-slate-950 dark:text-slate-100">
+
+  <!-- Page loader bar -->
+  <div id="loader" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════════════ -->
+  <header class="sticky top-0 z-50 bg-navy shadow-lg">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8"
+         aria-label="Primary navigation">
+
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-2" aria-label="LocalMistry home">
+        <img src="images/logo-60x60.png" alt="LocalMistry logo"
+             class="h-9 w-9 rounded-lg object-cover" width="36" height="36" />
+        <span class="text-lg font-extrabold text-white tracking-tight">
+          Local<span class="text-gold">Mistry</span>
+        </span>
+      </a>
+
+      <!-- Desktop nav -->
+      <div class="hidden items-center gap-6 lg:flex">
+        <a href="index.html"    class="text-sm font-medium text-white/80 transition hover:text-gold">Home</a>
+        <a href="services.html" class="text-sm font-medium text-white/80 transition hover:text-gold">Services</a>
+        <a href="products.html" class="text-sm font-semibold text-gold border-b-2 border-gold pb-0.5">Products</a>
+        <a href="aboutus.html"  class="text-sm font-medium text-white/80 transition hover:text-gold">About</a>
+        <a href="contact.html"  class="text-sm font-medium text-white/80 transition hover:text-gold">Contact</a>
+      </div>
+
+      <!-- Desktop CTA -->
+      <div class="hidden items-center gap-3 lg:flex">
+        <button id="theme-toggle" type="button" aria-label="Toggle dark mode"
+                class="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20">
+          <svg id="icon-moon" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg id="icon-sun" class="hidden h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+          </svg>
+        </button>
+        <a href="contact.html"
+           class="rounded-full bg-gold px-5 py-2 text-sm font-semibold text-white shadow-md transition hover:bg-gold-dark hover:-translate-y-0.5">
+          + Get a Quote
+        </a>
+      </div>
+
+      <!-- Mobile controls -->
+      <div class="flex items-center gap-2 lg:hidden">
+        <button id="theme-toggle-mob" type="button" aria-label="Toggle dark mode"
+                class="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white">
+          <svg id="icon-moon-mob" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg id="icon-sun-mob" class="hidden h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+          </svg>
+        </button>
+        <button id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"
+                class="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white">
+          <svg id="ham-open" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+          <svg id="ham-close" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden border-t border-white/10 bg-navy px-4 pb-5 pt-3 lg:hidden">
+      <ul class="space-y-1">
+        <li><a href="index.html"    class="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-gold">Home</a></li>
+        <li><a href="services.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-gold">Services</a></li>
+        <li><a href="products.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-gold bg-white/10">Products</a></li>
+        <li><a href="aboutus.html"  class="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-gold">About</a></li>
+        <li><a href="contact.html"  class="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-gold">Contact</a></li>
+      </ul>
+      <div class="mt-4 flex gap-3">
+        <a href="contact.html" class="flex-1 rounded-full border border-gold py-2.5 text-center text-sm font-semibold text-gold">Login</a>
+        <a href="contact.html" class="flex-1 rounded-full bg-gold py-2.5 text-center text-sm font-semibold text-white">Get a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════
+         HERO BANNER
+    ════════════════════════════════════════════════ -->
+    <section class="products-hero py-16 sm:py-24" aria-label="Products hero">
+      <div class="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
+
+        <!-- Breadcrumb -->
+        <nav class="mb-6 flex items-center justify-center gap-2 text-xs text-white/60" aria-label="Breadcrumb">
+          <a href="index.html" class="hover:text-gold transition">Home</a>
+          <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          <span class="text-gold font-semibold">Products</span>
+        </nav>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
+          Our <span class="text-gold">Products</span>
+        </h1>
+        <p class="mt-4 max-w-2xl mx-auto text-base text-white/70 leading-relaxed">
+          Curated kits, rentals, and service bundles trusted by thousands of homeowners. Shop quality gear or book a complete service package — all in one place.
+        </p>
+
+        <!-- Stats row -->
+        <div class="mt-10 flex flex-wrap justify-center gap-6 sm:gap-12">
+          <div class="text-center">
+            <p class="text-3xl font-extrabold text-gold">50+</p>
+            <p class="mt-0.5 text-xs text-white/60 uppercase tracking-widest">Products</p>
+          </div>
+          <div class="text-center">
+            <p class="text-3xl font-extrabold text-gold">4.8★</p>
+            <p class="mt-0.5 text-xs text-white/60 uppercase tracking-widest">Avg Rating</p>
+          </div>
+          <div class="text-center">
+            <p class="text-3xl font-extrabold text-gold">10k+</p>
+            <p class="mt-0.5 text-xs text-white/60 uppercase tracking-widest">Happy Buyers</p>
+          </div>
+          <div class="text-center">
+            <p class="text-3xl font-extrabold text-gold">Free</p>
+            <p class="mt-0.5 text-xs text-white/60 uppercase tracking-widest">Delivery ₹999+</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         PRODUCT SECTION
+    ════════════════════════════════════════════════ -->
+    <section class="py-16 bg-white dark:bg-slate-950" aria-label="Products catalogue">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        <!-- ── Tab filter bar ── -->
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-10">
+
+          <!-- Scrollable tabs -->
+          <div class="overflow-x-auto pb-1 -mb-1 pt-2">
+            <div class="flex gap-2 min-w-max" role="tablist" aria-label="Filter by category" id="tab-bar">
+              <button class="tab-btn active" data-filter="all"         role="tab" aria-selected="true">All Products</button>
+              <button class="tab-btn"        data-filter="electrical"  role="tab" aria-selected="false">⚡ Electrical</button>
+              <button class="tab-btn"        data-filter="plumbing"    role="tab" aria-selected="false">🔧 Plumbing</button>
+              <button class="tab-btn"        data-filter="cleaning"    role="tab" aria-selected="false">🧹 Cleaning</button>
+              <button class="tab-btn"        data-filter="carpentry"   role="tab" aria-selected="false">🪚 Carpentry</button>
+              <button class="tab-btn"        data-filter="security"    role="tab" aria-selected="false">📷 Security</button>
+              <button class="tab-btn"        data-filter="tools"       role="tab" aria-selected="false">🛠 Tools & Kits</button>
+            </div>
+          </div>
+
+          <!-- Result count + sort -->
+          <div class="flex items-center gap-3 shrink-0">
+            <span id="result-count" class="text-xs text-slate-500 dark:text-slate-400 font-medium"></span>
+            <select id="sort-select" aria-label="Sort products"
+                    class="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-600
+                           shadow-sm focus:outline-none focus:ring-2 focus:ring-gold
+                           dark:bg-slate-800 dark:border-slate-700 dark:text-slate-300">
+              <option value="default">Sort: Default</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="rating">Top Rated</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- ── Product grid ── -->
+        <div id="product-grid"
+             class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
+          <!-- ─── ELECTRICAL ─── -->
+
+          <!-- 1. Home Electrical Kit -->
+          <div class="p-card" data-category="electrical" data-price="499" data-rating="5">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-28 w-28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="60" cy="60" r="56" fill="#eef2ff"/>
+                <path d="M66 24L44 64h20L50 96l40-44H70L66 24z" fill="#f5a623" stroke="#d97706" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+              <div class="overlay">
+                <a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl hover:bg-gold-dark">Book Now</a>
+              </div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between">
+                <span class="badge bg-gold/15 text-gold">⭐ Bestseller</span>
+                <span class="text-xs text-gold">★★★★★</span>
+              </div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white leading-snug">Home Electrical Kit</h3>
+              <p class="mt-1 text-xs text-slate-500 dark:text-slate-400 leading-relaxed flex-1">Complete wiring &amp; safety kit for residential electrical work.</p>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow transition hover:bg-gold-dark hover:-translate-y-0.5">Get a Quote</a>
+            </div>
+          </div>
+
+          <!-- 2. Smart Circuit Breaker -->
+          <div class="p-card" data-category="electrical" data-price="1299" data-rating="4">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-28 w-28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="60" cy="60" r="56" fill="#eef2ff"/>
+                <rect x="32" y="28" width="56" height="64" rx="8" fill="#1a3a8f" fill-opacity=".18" stroke="#0a1f5c" stroke-width="2"/>
+                <rect x="40" y="38" width="40" height="20" rx="4" fill="#0a1f5c" fill-opacity=".15" stroke="#0a1f5c" stroke-width="1.5"/>
+                <circle cx="60" cy="48" r="6" fill="#f5a623"/>
+                <line x1="60" y1="44" x2="60" y2="48" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                <rect x="40" y="66" width="16" height="5" rx="2" fill="#f5a623" fill-opacity=".7"/>
+                <rect x="64" y="66" width="16" height="5" rx="2" fill="#0a1f5c" fill-opacity=".3"/>
+                <rect x="40" y="76" width="40" height="5" rx="2" fill="#0a1f5c" fill-opacity=".12"/>
+              </svg>
+              <div class="overlay">
+                <a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl hover:bg-gold-dark">Book Now</a>
+              </div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between">
+                <span class="badge bg-blue-100 text-blue-700">🆕 New Arrival</span>
+                <span class="text-xs text-gold">★★★★☆</span>
+              </div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white leading-snug">Smart Circuit Breaker</h3>
+              <p class="mt-1 text-xs text-slate-500 dark:text-slate-400 leading-relaxed flex-1">Wi-Fi enabled breaker with overload detection &amp; remote cut-off.</p>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow transition hover:bg-gold-dark hover:-translate-y-0.5">Get a Quote</a>
+            </div>
+          </div>
+
+          <!-- 3. LED Panel Light Set -->
+          <div class="p-card" data-category="electrical" data-price="349" data-rating="5">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-28 w-28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="60" cy="60" r="56" fill="#fffbeb"/>
+                <rect x="28" y="40" width="64" height="30" rx="8" fill="#f5a623" fill-opacity=".25" stroke="#d97706" stroke-width="2"/>
+                <circle cx="44" cy="55" r="8" fill="#f5a623" fill-opacity=".7"/>
+                <circle cx="60" cy="55" r="8" fill="#f5a623"/>
+                <circle cx="76" cy="55" r="8" fill="#f5a623" fill-opacity=".7"/>
+                <!-- rays -->
+                <path d="M60 72 L56 82M60 72 L60 82M60 72 L64 82" stroke="#f5a623" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>
+                <path d="M44 70 L40 80M44 70 L44 80M44 70 L48 80" stroke="#f5a623" stroke-width="1.5" stroke-linecap="round" opacity=".4"/>
+                <path d="M76 70 L72 80M76 70 L76 80M76 70 L80 80" stroke="#f5a623" stroke-width="1.5" stroke-linecap="round" opacity=".4"/>
+              </svg>
+              <div class="overlay">
+                <a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl hover:bg-gold-dark">Book Now</a>
+              </div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between">
+                <span class="badge bg-emerald-100 text-emerald-700">💚 Eco Pick</span>
+                <span class="text-xs text-gold">★★★★★</span>
+              </div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white leading-snug">LED Panel Light Set (3-pack)</h3>
+              <p class="mt-1 text-xs text-slate-500 dark:text-slate-400 leading-relaxed flex-1">Energy-saving 18W slim LED panels, warm &amp; cool white modes.</p>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow transition hover:bg-gold-dark hover:-translate-y-0.5">Get a Quote</a>
+            </div>
+          </div>
+
+          <!-- ─── PLUMBING ─── -->
+
+          <!-- 4. Plumbing Tool Set -->
+          <div class="p-card" data-category="plumbing" data-price="599" data-rating="4">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-28 w-28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="60" cy="60" r="56" fill="#eef2ff"/>
+                <path d="M82 22a18 18 0 0 0-18 18c0 3.6 1 6.9 2.8 9.7L28 88a7 7 0 1 0 9.9 9.9l38.8-38.8A18 18 0 1 0 82 22zm0 26a8 8 0 1 1 0-16 8 8 0 0 1 0 16z" fill="#f5a623"/>
+                <rect x="28" y="38" width="24" height="10" rx="4" fill="#94a3b8"/>
+                <rect x="36" y="48" width="8" height="16" rx="3" fill="#64748b"/>
+                <circle cx="32" cy="30" r="7" fill="#0a1f5c"/>
+              </svg>
+              <div class="overlay">
+                <a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl hover:bg-gold-dark">Book Now</a>
+              </div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between">
+                <span class="badge bg-blue-100 text-blue-700">🔧 Pro Kit</span>
+                <span class="text-xs text-gold">★★★★☆</span>
+              </div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white leading-snug">Plumbing Tool Set</h3>
+              <p class="mt-1 text-xs text-slate-500 dark:text-slate-400 leading-relaxed flex-1">Everything a professional plumber needs — wrenches, sealants &amp; more.</p>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow transition hover:bg-gold-dark hover:-translate-y-0.5">Get a Quote</a>
+            </div>
+          </div>
+
+          <!-- 5. Pipe Leak Repair Kit -->
+          <div class="p-card" data-category="plumbing" data-price="299" data-rating="4">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-28 w-28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="60" cy="60" r="56" fill="#eef2ff"/>
+                <!-- pipe horizontal -->
+                <rect x="20" y="50" width="80" height="20" rx="8" fill="#94a3b8" stroke="#64748b" stroke-width="2"/>
+                <!-- connector -->
+                <rect x="52" y="44" width="16" height="32" rx="6" fill="#f5a623" stroke="#d97706" stroke-width="2"/>
+                <!-- water drops -->
+                <ellipse cx="38" cy="82" rx="4" ry="5" fill="#38bdf8" opacity=".7"/>
+                <ellipse cx="50" cy="86" rx="3" ry="4" fill="#38bdf8" opacity=".5"/>
+                <!-- wrench mini -->
+                <path d="M78 28a7 7 0 0 0-7 7c0 1.4.4 2.7 1.1 3.8L58 53a2.8 2.8 0 1 0 3.9 3.9L76 43A7 7 0 1 0 78 28zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" fill="#0a1f5c"/>
+              </svg>
+              <div class="overlay">
+                <a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl hover:bg-gold-dark">Book Now</a>
+              </div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between">
+                <span class="badge bg-orange-100 text-orange-700">🔥 Hot Deal</span>
+                <span class="text-xs text-gold">★★★★☆</span>
+              </div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white leading-snug">Pipe Leak Repair Kit</h3>
+              <p class="mt-1 text-xs text-slate-500 dark:text-slate-400 leading-relaxed flex-1">Quick-seal epoxy &amp; clamps for instant pipe leak repair — no plumber needed.</p>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow transition hover:bg-gold-dark hover:-translate-y-0.5">Get a Quote</a>
+            </div>
+          </div>
+
+          <!-- ─── CLEANING ─── -->
+
+          <!-- 6. Home Cleaning Package -->
+          <div class="p-card" data-category="cleaning" data-price="799" data-rating="5">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-28 w-28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="60" cy="60" r="56" fill="#eef2ff"/>
+                <path d="M38 56 Q36 90 60 90 Q84 90 82 56Z" fill="#0a1f5c" fill-opacity=".18" stroke="#0a1f5c" stroke-width="2"/>
+                <path d="M42 52 Q60 38 78 52" fill="none" stroke="#f5a623" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="52" cy="68" r="5" fill="#38bdf8" opacity=".6"/>
+                <circle cx="65" cy="74" r="3.5" fill="#38bdf8" opacity=".5"/>
+                <circle cx="73" cy="64" r="4" fill="#38bdf8" opacity=".55"/>
+                <rect x="55" y="28" width="6" height="26" rx="3" fill="#d97706"/>
+                <path d="M48 54 Q60 62 72 54" fill="none" stroke="#f5a623" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+              <div class="overlay">
+                <a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl hover:bg-gold-dark">Book Now</a>
+              </div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between">
+                <span class="badge bg-emerald-100 text-emerald-700">🏆 Popular</span>
+                <span class="text-xs text-gold">★★★★★</span>
+              </div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white leading-snug">Home Cleaning Package</h3>
+              <p class="mt-1 text-xs text-slate-500 dark:text-slate-400 leading-relaxed flex-1">Deep cleaning kit with eco-friendly supplies for entire homes.</p>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow transition hover:bg-gold-dark hover:-translate-y-0.5">Get a Quote</a>
+            </div>
+          </div>
+
+          <!-- 7. Anti-Bacterial Floor Cleaner -->
+          <div class="p-card" data-category="cleaning" data-price="399" data-rating="4">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-28 w-28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="60" cy="60" r="56" fill="#f0fdf4"/>
+                <!-- bottle -->
+                <rect x="44" y="36" width="32" height="56" rx="10" fill="#0a1f5c" fill-opacity=".15" stroke="#0a1f5c" stroke-width="2"/>
+                <rect x="50" y="28" width="20" height="12" rx="5" fill="#1a3a8f" fill-opacity=".3" stroke="#0a1f5c" stroke-width="1.5"/>
+                <rect x="56" y="22" width="8" height="10" rx="3" fill="#f5a623"/>
+                <!-- label -->
+                <rect x="48" y="54" width="24" height="20" rx="4" fill="#f5a623" fill-opacity=".4"/>
+                <line x1="52" y1="60" x2="68" y2="60" stroke="#0a1f5c" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
+                <line x1="52" y1="65" x2="64" y2="65" stroke="#0a1f5c" stroke-width="1.5" stroke-linecap="round" opacity=".4"/>
+                <!-- bubbles -->
+                <circle cx="86" cy="50" r="5" fill="#38bdf8" opacity=".5"/>
+                <circle cx="92" cy="62" r="3.5" fill="#38bdf8" opacity=".4"/>
+              </svg>
+              <div class="overlay">
+                <a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl hover:bg-gold-dark">Book Now</a>
+              </div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between">
+                <span class="badge bg-emerald-100 text-emerald-700">💚 Eco</span>
+                <span class="text-xs text-gold">★★★★☆</span>
+              </div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white leading-snug">Anti-Bacterial Floor Cleaner (5L)</h3>
+              <p class="mt-1 text-xs text-slate-500 dark:text-slate-400 leading-relaxed flex-1">Hospital-grade formula — kills 99.9% germs, safe for all floor types.</p>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow transition hover:bg-gold-dark hover:-translate-y-0.5">Get a Quote</a>
+            </div>
+          </div>
+
+          <!-- ─── CARPENTRY ─── -->
+
+          <!-- 8. Carpenter Starter Kit -->
+          <div class="p-card" data-category="carpentry" data-price="899" data-rating="4">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-28 w-28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="60" cy="60" r="56" fill="#eef2ff"/>
+                <rect x="30" y="26" width="60" height="32" rx="9" fill="#f5a623"/>
+                <rect x="54" y="26" width="16" height="18" rx="4" fill="#d97706"/>
+                <rect x="54" y="56" width="12" height="40" rx="5" fill="#0a1f5c"/>
+                <rect x="34" y="32" width="18" height="8" rx="3" fill="#fff" opacity=".25"/>
+              </svg>
+              <div class="overlay">
+                <a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl hover:bg-gold-dark">Book Now</a>
+              </div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between">
+                <span class="badge bg-orange-100 text-orange-700">🔥 Hot Deal</span>
+                <span class="text-xs text-gold">★★★★☆</span>
+              </div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white leading-snug">Carpenter Starter Kit</h3>
+              <p class="mt-1 text-xs text-slate-500 dark:text-slate-400 leading-relaxed flex-1">Essential hand tools for woodworking, furniture repair &amp; finishing.</p>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow transition hover:bg-gold-dark hover:-translate-y-0.5">Get a Quote</a>
+            </div>
+          </div>
+
+          <!-- 9. Premium Wood Polish Kit -->
+          <div class="p-card" data-category="carpentry" data-price="549" data-rating="5">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-28 w-28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="60" cy="60" r="56" fill="#fef3c7"/>
+                <!-- brush -->
+                <rect x="55" y="22" width="10" height="48" rx="4" fill="#d97706"/>
+                <!-- bristles -->
+                <path d="M48 70 Q60 82 72 70" fill="none" stroke="#f5a623" stroke-width="4" stroke-linecap="round"/>
+                <path d="M50 74 Q60 88 70 74" fill="none" stroke="#d97706" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+                <!-- paint tin -->
+                <ellipse cx="36" cy="86" rx="16" ry="8" fill="#0a1f5c" fill-opacity=".15" stroke="#0a1f5c" stroke-width="1.5"/>
+                <rect x="20" y="72" width="32" height="14" rx="4" fill="#0a1f5c" fill-opacity=".12" stroke="#0a1f5c" stroke-width="1.5"/>
+                <ellipse cx="36" cy="72" rx="16" ry="5" fill="#f5a623" fill-opacity=".5" stroke="#d97706" stroke-width="1.5"/>
+              </svg>
+              <div class="overlay">
+                <a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl hover:bg-gold-dark">Book Now</a>
+              </div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between">
+                <span class="badge bg-gold/15 text-gold">⭐ Top Rated</span>
+                <span class="text-xs text-gold">★★★★★</span>
+              </div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white leading-snug">Premium Wood Polish Kit</h3>
+              <p class="mt-1 text-xs text-slate-500 dark:text-slate-400 leading-relaxed flex-1">Restore and protect furniture with this professional-grade polish set.</p>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow transition hover:bg-gold-dark hover:-translate-y-0.5">Get a Quote</a>
+            </div>
+          </div>
+
+          <!-- ─── SECURITY ─── -->
+
+          <!-- 10. CCTV Setup Package -->
+          <div class="p-card" data-category="security" data-price="2499" data-rating="5">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-28 w-28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="60" cy="60" r="56" fill="#eef2ff"/>
+                <rect x="26" y="46" width="44" height="28" rx="8" fill="#1a3a8f"/>
+                <circle cx="48" cy="60" r="10" fill="#0a1f5c" fill-opacity=".2" stroke="#0a1f5c" stroke-width="2.5"/>
+                <circle cx="48" cy="60" r="5" fill="#0a1f5c"/>
+                <path d="M70 52 L92 42M70 68 L92 78" stroke="#f5a623" stroke-width="4" stroke-linecap="round"/>
+                <line x1="44" y1="46" x2="44" y2="32" stroke="#0a1f5c" stroke-width="4" stroke-linecap="round"/>
+                <rect x="28" y="26" width="32" height="8" rx="3" fill="#f5a623"/>
+                <circle cx="86" cy="42" r="6" fill="#f5a623"/>
+                <circle cx="86" cy="42" r="3" fill="#fff"/>
+              </svg>
+              <div class="overlay">
+                <a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl hover:bg-gold-dark">Book Now</a>
+              </div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between">
+                <span class="badge bg-gold/15 text-gold">🆕 New</span>
+                <span class="text-xs text-gold">★★★★★</span>
+              </div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white leading-snug">CCTV Setup Package (4-cam)</h3>
+              <p class="mt-1 text-xs text-slate-500 dark:text-slate-400 leading-relaxed flex-1">4-camera HD surveillance system with night vision &amp; installation included.</p>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow transition hover:bg-gold-dark hover:-translate-y-0.5">Get a Quote</a>
+            </div>
+          </div>
+
+          <!-- 11. Smart Door Lock -->
+          <div class="p-card" data-category="security" data-price="3299" data-rating="5">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-28 w-28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="60" cy="60" r="56" fill="#eef2ff"/>
+                <!-- lock body -->
+                <rect x="34" y="56" width="52" height="44" rx="8" fill="#0a1f5c" fill-opacity=".18" stroke="#0a1f5c" stroke-width="2"/>
+                <!-- shackle -->
+                <path d="M44 56 V42 a16 16 0 0 1 32 0 V56" fill="none" stroke="#f5a623" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- keyhole -->
+                <circle cx="60" cy="76" r="6" fill="#0a1f5c" fill-opacity=".3" stroke="#0a1f5c" stroke-width="2"/>
+                <rect x="57" y="78" width="6" height="10" rx="2" fill="#0a1f5c" fill-opacity=".3"/>
+                <!-- wifi waves -->
+                <path d="M72 34 Q80 26 88 34" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>
+                <path d="M75 38 Q80 33 85 38" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+                <circle cx="80" cy="42" r="2.5" fill="#38bdf8" opacity=".8"/>
+              </svg>
+              <div class="overlay">
+                <a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl hover:bg-gold-dark">Book Now</a>
+              </div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between">
+                <span class="badge bg-blue-100 text-blue-700">📶 Smart</span>
+                <span class="text-xs text-gold">★★★★★</span>
+              </div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white leading-snug">Smart Wi-Fi Door Lock</h3>
+              <p class="mt-1 text-xs text-slate-500 dark:text-slate-400 leading-relaxed flex-1">Fingerprint + PIN + app-controlled lock with tamper alerts &amp; access logs.</p>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow transition hover:bg-gold-dark hover:-translate-y-0.5">Get a Quote</a>
+            </div>
+          </div>
+
+          <!-- ─── TOOLS & KITS ─── -->
+
+          <!-- 12. Pro Power Drill (Rental) -->
+          <div class="p-card" data-category="tools" data-price="299" data-rating="4">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-28 w-28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="60" cy="60" r="56" fill="#eef2ff"/>
+                <rect x="20" y="44" width="54" height="28" rx="9" fill="#1a3a8f"/>
+                <rect x="74" y="52" width="18" height="12" rx="4" fill="#94a3b8"/>
+                <line x1="92" y1="58" x2="110" y2="58" stroke="#64748b" stroke-width="5" stroke-linecap="round"/>
+                <path d="M34 72 Q30 88 40 90 H54 V72" fill="#0a1f5c"/>
+                <circle cx="36" cy="58" r="7" fill="#f5a623"/>
+                <line x1="36" y1="54" x2="36" y2="58" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                <line x1="48" y1="47" x2="48" y2="70" stroke="#38bdf8" stroke-width="1.5" opacity=".4"/>
+                <line x1="54" y1="47" x2="54" y2="70" stroke="#38bdf8" stroke-width="1.5" opacity=".4"/>
+              </svg>
+              <div class="overlay">
+                <a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl hover:bg-gold-dark">Rent Now</a>
+              </div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between">
+                <span class="badge bg-purple-100 text-purple-700">🔄 Rental</span>
+                <span class="text-xs text-gold">★★★★☆</span>
+              </div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white leading-snug">Pro Power Drill (Rental)</h3>
+              <p class="mt-1 text-xs text-slate-500 dark:text-slate-400 leading-relaxed flex-1">Industrial-grade cordless drill for carpentry &amp; installation jobs.</p>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow transition hover:bg-gold-dark hover:-translate-y-0.5">Get a Quote</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Empty state (shown when filter has 0 results) -->
+        <div id="empty-state" class="hidden flex-col items-center justify-center py-24 text-center">
+          <svg class="h-20 w-20 text-slate-300 dark:text-slate-600 mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <p class="text-slate-400 dark:text-slate-500 text-sm font-medium">No products found in this category.</p>
+          <button onclick="filterProducts('all')" class="mt-4 rounded-full bg-gold px-6 py-2 text-sm font-semibold text-white hover:bg-gold-dark transition">Show All Products</button>
+        </div>
+
+        <!-- Pagination hint -->
+        <div class="mt-14 flex justify-center">
+          <a href="contact.html"
+             class="rounded-full bg-navy px-10 py-3 text-sm font-bold text-white shadow-md transition hover:bg-navy-dark hover:-translate-y-0.5">
+            Request Custom Package →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         TRUST STRIP
+    ════════════════════════════════════════════════ -->
+    <section class="bg-navy py-10" aria-label="Trust indicators">
+      <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 gap-6 sm:grid-cols-4 text-center">
+          <div>
+            <div class="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-white/10">
+              <svg class="h-6 w-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+              </svg>
+            </div>
+            <p class="text-sm font-bold text-white">Free Delivery</p>
+            <p class="text-xs text-white/50 mt-0.5">On orders above ₹999</p>
+          </div>
+          <div>
+            <div class="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-white/10">
+              <svg class="h-6 w-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <p class="text-sm font-bold text-white">Verified Quality</p>
+            <p class="text-xs text-white/50 mt-0.5">ISI &amp; ISO certified products</p>
+          </div>
+          <div>
+            <div class="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-white/10">
+              <svg class="h-6 w-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-.49-4.58"/>
+              </svg>
+            </div>
+            <p class="text-sm font-bold text-white">Easy Returns</p>
+            <p class="text-xs text-white/50 mt-0.5">7-day hassle-free return</p>
+          </div>
+          <div>
+            <div class="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-white/10">
+              <svg class="h-6 w-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <p class="text-sm font-bold text-white">24/7 Support</p>
+            <p class="text-xs text-white/50 mt-0.5">Always here to help</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════ -->
+  <footer class="bg-navy-dark bg-[#061244] py-8 text-center text-xs text-white/40">
+    <p>© 2026 LocalMistry. All rights reserved. | <a href="privacy-policy.html" class="hover:text-gold transition">Privacy Policy</a> · <a href="terms-condition.html" class="hover:text-gold transition">Terms</a></p>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════
+       SCRIPTS
+  ════════════════════════════════════════════════ -->
+  <script>
+    /* ── Dark mode ── */
+    const root = document.documentElement;
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme:dark)').matches)) {
+      root.classList.add('dark');
+    }
+    function syncThemeIcons() {
+      const dark = root.classList.contains('dark');
+      ['icon-moon','icon-moon-mob'].forEach(id => document.getElementById(id)?.classList.toggle('hidden', dark));
+      ['icon-sun','icon-sun-mob'].forEach(id  => document.getElementById(id)?.classList.toggle('hidden', !dark));
+    }
+    syncThemeIcons();
+    ['theme-toggle','theme-toggle-mob'].forEach(id => {
+      document.getElementById(id)?.addEventListener('click', () => {
+        root.classList.toggle('dark');
+        localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
+        syncThemeIcons();
+      });
+    });
+
+    /* ── Mobile hamburger ── */
+    const hamburger   = document.getElementById('hamburger');
+    const mobileMenu  = document.getElementById('mobile-menu');
+    const hamOpen     = document.getElementById('ham-open');
+    const hamClose    = document.getElementById('ham-close');
+    hamburger?.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('hidden');
+      hamburger.setAttribute('aria-expanded', String(!open));
+      hamOpen.classList.toggle('hidden', !open);
+      hamClose.classList.toggle('hidden', open);
+    });
+
+    /* ── Tab filter ── */
+    const grid       = document.getElementById('product-grid');
+    const tabs       = document.querySelectorAll('.tab-btn');
+    const countEl    = document.getElementById('result-count');
+    const emptyState = document.getElementById('empty-state');
+
+    function filterProducts(category) {
+      const cards = grid.querySelectorAll('.p-card');
+      let visible  = 0;
+
+      cards.forEach((card, i) => {
+        const match = category === 'all' || card.dataset.category === category;
+        if (match) {
+          card.classList.remove('hidden-card');
+          // Re-trigger animation with staggered delay
+          card.style.animationDelay = `${i * 0.06}s`;
+          card.style.animation = 'none';
+          card.offsetHeight; // reflow
+          card.style.animation = '';
+          visible++;
+        } else {
+          card.classList.add('hidden-card');
+        }
+      });
+
+      // Update count
+      countEl.textContent = `${visible} product${visible !== 1 ? 's' : ''}`;
+
+      // Empty state
+      emptyState.classList.toggle('hidden', visible > 0);
+      emptyState.classList.toggle('flex', visible === 0);
+    }
+
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        filterProducts(btn.dataset.filter);
+      });
+    });
+
+    /* ── Sort ── */
+    document.getElementById('sort-select')?.addEventListener('change', function() {
+      const cards = [...grid.querySelectorAll('.p-card:not(.hidden-card)')];
+      cards.sort((a, b) => {
+        if (this.value === 'price-asc')  return +a.dataset.price - +b.dataset.price;
+        if (this.value === 'price-desc') return +b.dataset.price - +a.dataset.price;
+        if (this.value === 'rating')     return +b.dataset.rating - +a.dataset.rating;
+        return 0;
+      });
+      cards.forEach((c, i) => {
+        c.style.animationDelay = `${i * 0.05}s`;
+        c.style.animation = 'none';
+        c.offsetHeight;
+        c.style.animation = '';
+        grid.appendChild(c);
+      });
+    });
+
+    /* ── Wishlist hearts ── */
+    document.querySelectorAll('.wishlist-btn').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        const svg = btn.querySelector('svg');
+        const active = btn.classList.toggle('text-red-500');
+        btn.classList.toggle('text-slate-400', !active);
+        if (active) svg.setAttribute('fill', '#ef4444');
+        else         svg.setAttribute('fill', 'none');
+        btn.classList.remove('heart-pop');
+        btn.offsetHeight;
+        btn.classList.add('heart-pop');
+      });
+    });
+
+    /* ── Initial count ── */
+    filterProducts('all');
+  </script>
+
+</body>
+</html>
