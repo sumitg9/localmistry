@@ -5,13 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO -->
-  <title>Contact Us | LocalMistry — Get in Touch</title>
-  <meta name="description" content="Have questions or want to book a service? Contact LocalMistry support. Call, WhatsApp or fill the form — we reply within minutes." />
+  <title>Contact Us | LocalMistry — Book Direct Services in Siliguri</title>
+  <meta name="description" content="Contact LocalMistry for direct electrical, plumbing, cleaning, carpentry, appliance and maintenance services in Siliguri and surrounding areas." />
+  <meta name="keywords" content="contact localmistry, electrician siliguri, plumber siliguri, home service booking siliguri, localmistry contact" />
   <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="IN-WB" />
+  <meta name="geo.placename" content="Siliguri" />
 
   <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
-  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon.png" />
+  <link rel="shortcut icon" href="images/logo/favicon.png" />
 
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,8 +29,8 @@
       theme: {
         extend: {
           colors: {
-            navy: { DEFAULT: '#0a1f5c', dark: '#061244', light: '#1a3a8f' },
-            gold: { DEFAULT: '#f5a623', light: '#fbbf24', dark: '#d97706' },
+            navy: { DEFAULT: '#13335c', dark: '#13335c', light: '#1f4f74' },
+            gold: { DEFAULT: '#0e888d', light: '#35a5aa', dark: '#0a6d71' },
             sky:  '#e8f0fe',
           },
           fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
@@ -37,12 +40,12 @@
   </script>
 
   <style>
-    :focus-visible { outline: 3px solid #f5a623; outline-offset: 3px; }
+    :focus-visible { outline: 3px solid #0e888d; outline-offset: 3px; }
     ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-thumb { background: #f5a623; border-radius: 99px; }
+    ::-webkit-scrollbar-thumb { background: #0e888d; border-radius: 99px; }
 
     .contact-hero {
-      background: linear-gradient(135deg, #0a1f5c 0%, #1a3a8f 60%, #0a1f5c 100%);
+      background: linear-gradient(135deg, #13335c 0%, #1f4f74 60%, #13335c 100%);
       position: relative; overflow: hidden;
     }
     .contact-hero::before {
@@ -54,13 +57,13 @@
       transition: all .2s ease;
     }
     .form-input:focus {
-      border-color: #f5a623;
+      border-color: #0e888d;
       box-shadow: 0 0 0 3px rgba(245, 166, 35, .15);
     }
 
     #loader {
       position: fixed; top: 0; left: 0; height: 3px;
-      background: linear-gradient(90deg, #f5a623, #fbbf24);
+      background: linear-gradient(90deg, #0e888d, #35a5aa);
       z-index: 9999; animation: loadBar .8s ease forwards;
     }
     @keyframes loadBar { from { width: 0; } to { width: 100%; opacity: 0; } }
@@ -76,24 +79,23 @@
   <div id="loader" aria-hidden="true"></div>
 
   <!-- NAVBAR (Contact active) -->
-  <header class="sticky top-0 z-50 bg-navy shadow-lg">
+  <header class="sticky top-0 z-50 bg-white shadow-lg">
     <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8" aria-label="Primary navigation">
-      <a href="index.html" class="flex items-center gap-2" aria-label="LocalMistry home">
-        <img src="images/logo-60x60.png" alt="LocalMistry logo" class="h-9 w-9 rounded-lg object-cover" width="36" height="36" />
-        <span class="text-lg font-extrabold text-white tracking-tight">Local<span class="text-gold">Mistry</span></span>
+      <a href="index.html" class="flex items-center" aria-label="LocalMistry home">
+        <img src="images/logo/logo-horizontal.png" alt="LocalMistry logo" class="h-9 w-auto object-contain" />
       </a>
 
       <div class="hidden items-center gap-6 lg:flex">
-        <a href="index.html"    class="text-sm font-medium text-white/80 transition hover:text-gold">Home</a>
-        <a href="services.html" class="text-sm font-medium text-white/80 transition hover:text-gold">Services</a>
-        <a href="products.html" class="text-sm font-medium text-white/80 transition hover:text-gold">Products</a>
-        <a href="aboutus.html"  class="text-sm font-medium text-white/80 transition hover:text-gold">About</a>
-        <a href="contact.html"  class="text-sm font-semibold text-gold border-b-2 border-gold pb-0.5">Contact</a>
+        <a href="index.html"    class="text-sm font-medium text-slate-700 transition hover:text-[#0e888d]">Home</a>
+        <a href="services.html" class="text-sm font-medium text-slate-700 transition hover:text-[#0e888d]">Services</a>
+        <a href="products.html" class="text-sm font-medium text-slate-700 transition hover:text-[#0e888d]">Products</a>
+        <a href="aboutus.html"  class="text-sm font-medium text-slate-700 transition hover:text-[#0e888d]">About</a>
+        <a href="contact.html"  class="text-sm font-semibold text-[#0e888d] border-b-2 border-[#0e888d] pb-0.5">Contact</a>
       </div>
 
       <div class="hidden items-center gap-3 lg:flex">
         <button id="theme-toggle" type="button" aria-label="Toggle dark mode"
-                class="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20">
+                class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-700 transition hover:bg-slate-200">
           <svg id="icon-moon" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
           <svg id="icon-sun" class="hidden h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
         </button>
@@ -101,11 +103,11 @@
       </div>
 
       <div class="flex items-center gap-2 lg:hidden">
-        <button id="theme-toggle-mob" type="button" aria-label="Toggle dark mode" class="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white">
+        <button id="theme-toggle-mob" type="button" aria-label="Toggle dark mode" class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-700">
           <svg id="icon-moon-mob" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
           <svg id="icon-sun-mob" class="hidden h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
         </button>
-        <button id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" class="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white">
+        <button id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-700">
           <svg id="ham-open" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
           <svg id="ham-close" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
@@ -113,17 +115,17 @@
     </nav>
 
     <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden border-t border-white/10 bg-navy px-4 pb-5 pt-3 lg:hidden">
+    <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white px-4 pb-5 pt-3 lg:hidden">
       <ul class="space-y-1">
-        <li><a href="index.html"    class="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-gold">Home</a></li>
-        <li><a href="services.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-gold">Services</a></li>
-        <li><a href="products.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-gold">Products</a></li>
-        <li><a href="aboutus.html"  class="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-gold">About</a></li>
-        <li><a href="contact.html"  class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-gold bg-white/10">Contact</a></li>
+        <li><a href="index.html"    class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-[#0e888d]">Home</a></li>
+        <li><a href="services.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-[#0e888d]">Services</a></li>
+        <li><a href="products.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-[#0e888d]">Products</a></li>
+        <li><a href="aboutus.html"  class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-[#0e888d]">About</a></li>
+        <li><a href="contact.html"  class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-[#0e888d] bg-slate-100">Contact</a></li>
       </ul>
       <div class="mt-4 flex gap-3">
-        <a href="contact.html" class="flex-1 rounded-full border border-gold py-2.5 text-center text-sm font-semibold text-gold">Login</a>
-        <a href="contact.html" class="flex-1 rounded-full bg-gold py-2.5 text-center text-sm font-semibold text-white">Get a Quote</a>
+        <a href="contact.html" class="flex-1 rounded-full border border-[#0e888d] py-2.5 text-center text-sm font-semibold text-[#0e888d]">Login</a>
+        <a href="contact.html" class="flex-1 rounded-full bg-[#0e888d] py-2.5 text-center text-sm font-semibold text-white">Get a Quote</a>
       </div>
     </div>
   </header>
@@ -139,8 +141,8 @@
           <span class="text-gold font-semibold">Contact</span>
         </nav>
 
-        <h1 class="text-4xl sm:text-5xl font-extrabold text-white leading-tight">Let's talk.</h1>
-        <p class="mt-3 text-lg text-white/70 max-w-md mx-auto">Our team usually replies within 5 minutes. Or book instantly using the form below.</p>
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-white leading-tight">Book Direct Service in Siliguri.</h1>
+        <p class="mt-3 text-lg text-white/70 max-w-md mx-auto">Call, WhatsApp or fill the form below to request electrical, plumbing, cleaning, carpentry, appliance or maintenance support from our local team.</p>
       </div>
     </section>
 
@@ -186,9 +188,7 @@
                     <option>Electrical Work</option>
                     <option>Plumbing</option>
                     <option>Home Cleaning</option>
-                    <option>Salon at Home</option>
                     <option>Carpentry</option>
-                    <option>AC / Appliance Repair</option>
                     <option>Other / Custom Request</option>
                   </select>
                 </div>
@@ -262,7 +262,7 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-navy-dark bg-[#061244] py-8 text-center text-xs text-white/40">
+  <footer class="bg-navy-dark bg-[#13335c] py-8 text-center text-xs text-white/40">
     <p>© 2026 LocalMistry. All rights reserved. | <a href="privacy-policy.html" class="hover:text-gold transition">Privacy Policy</a> · <a href="terms-condition.html" class="hover:text-gold transition">Terms</a></p>
   </footer>
 

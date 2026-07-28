@@ -5,14 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO -->
-  <title>Products | LocalMistry — Professional Tools & Service Packages</title>
-  <meta name="description" content="Shop professional-grade home service tools, kits, and packages on LocalMistry. Electrical kits, plumbing tools, cleaning packages, CCTV systems and more." />
-  <meta name="keywords" content="home service products, electrical kit, plumbing tools, cleaning package, CCTV setup, carpenter tools, LocalMistry shop" />
+  <title>Products | LocalMistry — Service Packages & Direct Home Support in Siliguri</title>
+  <meta name="description" content="LocalMistry offers direct service packages and professional support for electrical, plumbing, cleaning, carpentry and appliance needs in Siliguri and nearby areas." />
+  <meta name="keywords" content="service packages siliguri, electrician service package, plumber service package, home cleaning package, carpenter package, localmistry products siliguri" />
   <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="IN-WB" />
+  <meta name="geo.placename" content="Siliguri" />
 
   <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
-  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon.png" />
+  <link rel="shortcut icon" href="images/logo/favicon.png" />
 
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,8 +29,8 @@
       theme: {
         extend: {
           colors: {
-            navy: { DEFAULT: '#0a1f5c', dark: '#061244', light: '#1a3a8f' },
-            gold: { DEFAULT: '#f5a623', light: '#fbbf24', dark: '#d97706' },
+            navy: { DEFAULT: '#13335c', dark: '#13335c', light: '#1f4f74' },
+            gold: { DEFAULT: '#0e888d', light: '#35a5aa', dark: '#0a6d71' },
             sky:  '#e8f0fe',
           },
           fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
@@ -38,11 +40,11 @@
   </script>
 
   <style>
-    :focus-visible { outline: 3px solid #f5a623; outline-offset: 3px; }
+    :focus-visible { outline: 3px solid #0e888d; outline-offset: 3px; }
 
     /* ── scrollbar ── */
     ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-thumb { background: #f5a623; border-radius: 99px; }
+    ::-webkit-scrollbar-thumb { background: #0e888d; border-radius: 99px; }
 
     /* ── Tab filter ── */
     .tab-btn {
@@ -58,15 +60,15 @@
       transition: color .22s, background .22s, border-color .22s, transform .18s;
       white-space: nowrap;
     }
-    .tab-btn:hover { color: #f5a623; border-color: #f5a623; transform: translateY(-1px); }
+    .tab-btn:hover { color: #0e888d; border-color: #0e888d; transform: translateY(-1px); }
     .tab-btn.active {
-      background: #f5a623;
+      background: #0e888d;
       color: #fff;
-      border-color: #f5a623;
+      border-color: #0e888d;
       box-shadow: 0 6px 20px rgba(245,166,35,.35);
     }
     .dark .tab-btn { color: #94a3b8; }
-    .dark .tab-btn:hover { color: #f5a623; }
+    .dark .tab-btn:hover { color: #0e888d; }
 
     /* ── Product card ── */
     .p-card {
@@ -185,7 +187,7 @@
 
     /* ── Hero banner ── */
     .products-hero {
-      background: linear-gradient(135deg, #0a1f5c 0%, #1a3a8f 60%, #0a1f5c 100%);
+      background: linear-gradient(135deg, #13335c 0%, #1f4f74 60%, #13335c 100%);
       position: relative;
       overflow: hidden;
     }
@@ -201,7 +203,7 @@
       position: fixed;
       top: 0; left: 0;
       height: 3px;
-      background: linear-gradient(90deg, #f5a623, #fbbf24);
+      background: linear-gradient(90deg, #0e888d, #35a5aa);
       z-index: 9999;
       animation: loadBar .8s ease forwards;
     }
@@ -229,32 +231,29 @@
   <!-- ═══════════════════════════════════════════════
        NAVBAR
   ════════════════════════════════════════════════ -->
-  <header class="sticky top-0 z-50 bg-navy shadow-lg">
+  <header class="sticky top-0 z-50 bg-white shadow-lg">
     <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8"
          aria-label="Primary navigation">
 
       <!-- Logo -->
-      <a href="index.html" class="flex items-center gap-2" aria-label="LocalMistry home">
-        <img src="images/logo-60x60.png" alt="LocalMistry logo"
-             class="h-9 w-9 rounded-lg object-cover" width="36" height="36" />
-        <span class="text-lg font-extrabold text-white tracking-tight">
-          Local<span class="text-gold">Mistry</span>
-        </span>
+      <a href="index.html" class="flex items-center" aria-label="LocalMistry home">
+        <img src="images/logo/logo-horizontal.png" alt="LocalMistry logo"
+             class="h-9 w-auto object-contain" />
       </a>
 
       <!-- Desktop nav -->
       <div class="hidden items-center gap-6 lg:flex">
-        <a href="index.html"    class="text-sm font-medium text-white/80 transition hover:text-gold">Home</a>
-        <a href="services.html" class="text-sm font-medium text-white/80 transition hover:text-gold">Services</a>
-        <a href="products.html" class="text-sm font-semibold text-gold border-b-2 border-gold pb-0.5">Products</a>
-        <a href="aboutus.html"  class="text-sm font-medium text-white/80 transition hover:text-gold">About</a>
-        <a href="contact.html"  class="text-sm font-medium text-white/80 transition hover:text-gold">Contact</a>
+        <a href="index.html"    class="text-sm font-medium text-slate-700 transition hover:text-[#0e888d]">Home</a>
+        <a href="services.html" class="text-sm font-medium text-slate-700 transition hover:text-[#0e888d]">Services</a>
+        <a href="products.html" class="text-sm font-semibold text-[#0e888d] border-b-2 border-[#0e888d] pb-0.5">Products</a>
+        <a href="aboutus.html"  class="text-sm font-medium text-slate-700 transition hover:text-[#0e888d]">About</a>
+        <a href="contact.html"  class="text-sm font-medium text-slate-700 transition hover:text-[#0e888d]">Contact</a>
       </div>
 
       <!-- Desktop CTA -->
       <div class="hidden items-center gap-3 lg:flex">
         <button id="theme-toggle" type="button" aria-label="Toggle dark mode"
-                class="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20">
+                class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-700 transition hover:bg-slate-200">
           <svg id="icon-moon" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
           </svg>
@@ -272,7 +271,7 @@
       <!-- Mobile controls -->
       <div class="flex items-center gap-2 lg:hidden">
         <button id="theme-toggle-mob" type="button" aria-label="Toggle dark mode"
-                class="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white">
+                class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-700">
           <svg id="icon-moon-mob" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
           </svg>
@@ -282,7 +281,7 @@
           </svg>
         </button>
         <button id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"
-                class="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white">
+                class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-700">
           <svg id="ham-open" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
             <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
           </svg>
@@ -294,17 +293,17 @@
     </nav>
 
     <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden border-t border-white/10 bg-navy px-4 pb-5 pt-3 lg:hidden">
+    <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white px-4 pb-5 pt-3 lg:hidden">
       <ul class="space-y-1">
-        <li><a href="index.html"    class="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-gold">Home</a></li>
-        <li><a href="services.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-gold">Services</a></li>
-        <li><a href="products.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-gold bg-white/10">Products</a></li>
-        <li><a href="aboutus.html"  class="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-gold">About</a></li>
-        <li><a href="contact.html"  class="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-gold">Contact</a></li>
+        <li><a href="index.html"    class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-[#0e888d]">Home</a></li>
+        <li><a href="services.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-[#0e888d]">Services</a></li>
+        <li><a href="products.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-[#0e888d] bg-slate-100">Products</a></li>
+        <li><a href="aboutus.html"  class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-[#0e888d]">About</a></li>
+        <li><a href="contact.html"  class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-[#0e888d]">Contact</a></li>
       </ul>
       <div class="mt-4 flex gap-3">
-        <a href="contact.html" class="flex-1 rounded-full border border-gold py-2.5 text-center text-sm font-semibold text-gold">Login</a>
-        <a href="contact.html" class="flex-1 rounded-full bg-gold py-2.5 text-center text-sm font-semibold text-white">Get a Quote</a>
+        <a href="contact.html" class="flex-1 rounded-full border border-[#0e888d] py-2.5 text-center text-sm font-semibold text-[#0e888d]">Login</a>
+        <a href="contact.html" class="flex-1 rounded-full bg-[#0e888d] py-2.5 text-center text-sm font-semibold text-white">Get a Quote</a>
       </div>
     </div>
   </header>
@@ -325,10 +324,10 @@
         </nav>
 
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
-          Our <span class="text-gold">Products</span>
+          Direct <span class="text-gold">Service Packages</span>
         </h1>
         <p class="mt-4 max-w-2xl mx-auto text-base text-white/70 leading-relaxed">
-          Curated kits, rentals, and service bundles trusted by thousands of homeowners. Shop quality gear or book a complete service package — all in one place.
+          We provide dependable service packages for electrical work, plumbing, cleaning, carpentry, appliance repair and more — delivered by our direct team in Siliguri and nearby areas.
         </p>
 
         <!-- Stats row -->
@@ -401,7 +400,7 @@
             <div class="img-wrap">
               <svg viewBox="0 0 120 120" class="h-28 w-28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <circle cx="60" cy="60" r="56" fill="#eef2ff"/>
-                <path d="M66 24L44 64h20L50 96l40-44H70L66 24z" fill="#f5a623" stroke="#d97706" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M66 24L44 64h20L50 96l40-44H70L66 24z" fill="#0e888d" stroke="#0a6d71" stroke-width="2" stroke-linejoin="round"/>
               </svg>
               <div class="overlay">
                 <a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl hover:bg-gold-dark">Book Now</a>
@@ -423,13 +422,13 @@
             <div class="img-wrap">
               <svg viewBox="0 0 120 120" class="h-28 w-28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <circle cx="60" cy="60" r="56" fill="#eef2ff"/>
-                <rect x="32" y="28" width="56" height="64" rx="8" fill="#1a3a8f" fill-opacity=".18" stroke="#0a1f5c" stroke-width="2"/>
-                <rect x="40" y="38" width="40" height="20" rx="4" fill="#0a1f5c" fill-opacity=".15" stroke="#0a1f5c" stroke-width="1.5"/>
-                <circle cx="60" cy="48" r="6" fill="#f5a623"/>
+                <rect x="32" y="28" width="56" height="64" rx="8" fill="#1f4f74" fill-opacity=".18" stroke="#13335c" stroke-width="2"/>
+                <rect x="40" y="38" width="40" height="20" rx="4" fill="#13335c" fill-opacity=".15" stroke="#13335c" stroke-width="1.5"/>
+                <circle cx="60" cy="48" r="6" fill="#0e888d"/>
                 <line x1="60" y1="44" x2="60" y2="48" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-                <rect x="40" y="66" width="16" height="5" rx="2" fill="#f5a623" fill-opacity=".7"/>
-                <rect x="64" y="66" width="16" height="5" rx="2" fill="#0a1f5c" fill-opacity=".3"/>
-                <rect x="40" y="76" width="40" height="5" rx="2" fill="#0a1f5c" fill-opacity=".12"/>
+                <rect x="40" y="66" width="16" height="5" rx="2" fill="#0e888d" fill-opacity=".7"/>
+                <rect x="64" y="66" width="16" height="5" rx="2" fill="#13335c" fill-opacity=".3"/>
+                <rect x="40" y="76" width="40" height="5" rx="2" fill="#13335c" fill-opacity=".12"/>
               </svg>
               <div class="overlay">
                 <a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl hover:bg-gold-dark">Book Now</a>
@@ -451,14 +450,14 @@
             <div class="img-wrap">
               <svg viewBox="0 0 120 120" class="h-28 w-28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <circle cx="60" cy="60" r="56" fill="#fffbeb"/>
-                <rect x="28" y="40" width="64" height="30" rx="8" fill="#f5a623" fill-opacity=".25" stroke="#d97706" stroke-width="2"/>
-                <circle cx="44" cy="55" r="8" fill="#f5a623" fill-opacity=".7"/>
-                <circle cx="60" cy="55" r="8" fill="#f5a623"/>
-                <circle cx="76" cy="55" r="8" fill="#f5a623" fill-opacity=".7"/>
+                <rect x="28" y="40" width="64" height="30" rx="8" fill="#0e888d" fill-opacity=".25" stroke="#0a6d71" stroke-width="2"/>
+                <circle cx="44" cy="55" r="8" fill="#0e888d" fill-opacity=".7"/>
+                <circle cx="60" cy="55" r="8" fill="#0e888d"/>
+                <circle cx="76" cy="55" r="8" fill="#0e888d" fill-opacity=".7"/>
                 <!-- rays -->
-                <path d="M60 72 L56 82M60 72 L60 82M60 72 L64 82" stroke="#f5a623" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>
-                <path d="M44 70 L40 80M44 70 L44 80M44 70 L48 80" stroke="#f5a623" stroke-width="1.5" stroke-linecap="round" opacity=".4"/>
-                <path d="M76 70 L72 80M76 70 L76 80M76 70 L80 80" stroke="#f5a623" stroke-width="1.5" stroke-linecap="round" opacity=".4"/>
+                <path d="M60 72 L56 82M60 72 L60 82M60 72 L64 82" stroke="#0e888d" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>
+                <path d="M44 70 L40 80M44 70 L44 80M44 70 L48 80" stroke="#0e888d" stroke-width="1.5" stroke-linecap="round" opacity=".4"/>
+                <path d="M76 70 L72 80M76 70 L76 80M76 70 L80 80" stroke="#0e888d" stroke-width="1.5" stroke-linecap="round" opacity=".4"/>
               </svg>
               <div class="overlay">
                 <a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl hover:bg-gold-dark">Book Now</a>
@@ -482,10 +481,10 @@
             <div class="img-wrap">
               <svg viewBox="0 0 120 120" class="h-28 w-28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <circle cx="60" cy="60" r="56" fill="#eef2ff"/>
-                <path d="M82 22a18 18 0 0 0-18 18c0 3.6 1 6.9 2.8 9.7L28 88a7 7 0 1 0 9.9 9.9l38.8-38.8A18 18 0 1 0 82 22zm0 26a8 8 0 1 1 0-16 8 8 0 0 1 0 16z" fill="#f5a623"/>
+                <path d="M82 22a18 18 0 0 0-18 18c0 3.6 1 6.9 2.8 9.7L28 88a7 7 0 1 0 9.9 9.9l38.8-38.8A18 18 0 1 0 82 22zm0 26a8 8 0 1 1 0-16 8 8 0 0 1 0 16z" fill="#0e888d"/>
                 <rect x="28" y="38" width="24" height="10" rx="4" fill="#94a3b8"/>
                 <rect x="36" y="48" width="8" height="16" rx="3" fill="#64748b"/>
-                <circle cx="32" cy="30" r="7" fill="#0a1f5c"/>
+                <circle cx="32" cy="30" r="7" fill="#13335c"/>
               </svg>
               <div class="overlay">
                 <a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl hover:bg-gold-dark">Book Now</a>
@@ -510,12 +509,12 @@
                 <!-- pipe horizontal -->
                 <rect x="20" y="50" width="80" height="20" rx="8" fill="#94a3b8" stroke="#64748b" stroke-width="2"/>
                 <!-- connector -->
-                <rect x="52" y="44" width="16" height="32" rx="6" fill="#f5a623" stroke="#d97706" stroke-width="2"/>
+                <rect x="52" y="44" width="16" height="32" rx="6" fill="#0e888d" stroke="#0a6d71" stroke-width="2"/>
                 <!-- water drops -->
                 <ellipse cx="38" cy="82" rx="4" ry="5" fill="#38bdf8" opacity=".7"/>
                 <ellipse cx="50" cy="86" rx="3" ry="4" fill="#38bdf8" opacity=".5"/>
                 <!-- wrench mini -->
-                <path d="M78 28a7 7 0 0 0-7 7c0 1.4.4 2.7 1.1 3.8L58 53a2.8 2.8 0 1 0 3.9 3.9L76 43A7 7 0 1 0 78 28zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" fill="#0a1f5c"/>
+                <path d="M78 28a7 7 0 0 0-7 7c0 1.4.4 2.7 1.1 3.8L58 53a2.8 2.8 0 1 0 3.9 3.9L76 43A7 7 0 1 0 78 28zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" fill="#13335c"/>
               </svg>
               <div class="overlay">
                 <a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl hover:bg-gold-dark">Book Now</a>
@@ -539,13 +538,13 @@
             <div class="img-wrap">
               <svg viewBox="0 0 120 120" class="h-28 w-28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <circle cx="60" cy="60" r="56" fill="#eef2ff"/>
-                <path d="M38 56 Q36 90 60 90 Q84 90 82 56Z" fill="#0a1f5c" fill-opacity=".18" stroke="#0a1f5c" stroke-width="2"/>
-                <path d="M42 52 Q60 38 78 52" fill="none" stroke="#f5a623" stroke-width="4" stroke-linecap="round"/>
+                <path d="M38 56 Q36 90 60 90 Q84 90 82 56Z" fill="#13335c" fill-opacity=".18" stroke="#13335c" stroke-width="2"/>
+                <path d="M42 52 Q60 38 78 52" fill="none" stroke="#0e888d" stroke-width="4" stroke-linecap="round"/>
                 <circle cx="52" cy="68" r="5" fill="#38bdf8" opacity=".6"/>
                 <circle cx="65" cy="74" r="3.5" fill="#38bdf8" opacity=".5"/>
                 <circle cx="73" cy="64" r="4" fill="#38bdf8" opacity=".55"/>
-                <rect x="55" y="28" width="6" height="26" rx="3" fill="#d97706"/>
-                <path d="M48 54 Q60 62 72 54" fill="none" stroke="#f5a623" stroke-width="3" stroke-linecap="round"/>
+                <rect x="55" y="28" width="6" height="26" rx="3" fill="#0a6d71"/>
+                <path d="M48 54 Q60 62 72 54" fill="none" stroke="#0e888d" stroke-width="3" stroke-linecap="round"/>
               </svg>
               <div class="overlay">
                 <a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl hover:bg-gold-dark">Book Now</a>
@@ -568,13 +567,13 @@
               <svg viewBox="0 0 120 120" class="h-28 w-28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <circle cx="60" cy="60" r="56" fill="#f0fdf4"/>
                 <!-- bottle -->
-                <rect x="44" y="36" width="32" height="56" rx="10" fill="#0a1f5c" fill-opacity=".15" stroke="#0a1f5c" stroke-width="2"/>
-                <rect x="50" y="28" width="20" height="12" rx="5" fill="#1a3a8f" fill-opacity=".3" stroke="#0a1f5c" stroke-width="1.5"/>
-                <rect x="56" y="22" width="8" height="10" rx="3" fill="#f5a623"/>
+                <rect x="44" y="36" width="32" height="56" rx="10" fill="#13335c" fill-opacity=".15" stroke="#13335c" stroke-width="2"/>
+                <rect x="50" y="28" width="20" height="12" rx="5" fill="#1f4f74" fill-opacity=".3" stroke="#13335c" stroke-width="1.5"/>
+                <rect x="56" y="22" width="8" height="10" rx="3" fill="#0e888d"/>
                 <!-- label -->
-                <rect x="48" y="54" width="24" height="20" rx="4" fill="#f5a623" fill-opacity=".4"/>
-                <line x1="52" y1="60" x2="68" y2="60" stroke="#0a1f5c" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
-                <line x1="52" y1="65" x2="64" y2="65" stroke="#0a1f5c" stroke-width="1.5" stroke-linecap="round" opacity=".4"/>
+                <rect x="48" y="54" width="24" height="20" rx="4" fill="#0e888d" fill-opacity=".4"/>
+                <line x1="52" y1="60" x2="68" y2="60" stroke="#13335c" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
+                <line x1="52" y1="65" x2="64" y2="65" stroke="#13335c" stroke-width="1.5" stroke-linecap="round" opacity=".4"/>
                 <!-- bubbles -->
                 <circle cx="86" cy="50" r="5" fill="#38bdf8" opacity=".5"/>
                 <circle cx="92" cy="62" r="3.5" fill="#38bdf8" opacity=".4"/>
@@ -601,9 +600,9 @@
             <div class="img-wrap">
               <svg viewBox="0 0 120 120" class="h-28 w-28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <circle cx="60" cy="60" r="56" fill="#eef2ff"/>
-                <rect x="30" y="26" width="60" height="32" rx="9" fill="#f5a623"/>
-                <rect x="54" y="26" width="16" height="18" rx="4" fill="#d97706"/>
-                <rect x="54" y="56" width="12" height="40" rx="5" fill="#0a1f5c"/>
+                <rect x="30" y="26" width="60" height="32" rx="9" fill="#0e888d"/>
+                <rect x="54" y="26" width="16" height="18" rx="4" fill="#0a6d71"/>
+                <rect x="54" y="56" width="12" height="40" rx="5" fill="#13335c"/>
                 <rect x="34" y="32" width="18" height="8" rx="3" fill="#fff" opacity=".25"/>
               </svg>
               <div class="overlay">
@@ -627,14 +626,14 @@
               <svg viewBox="0 0 120 120" class="h-28 w-28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <circle cx="60" cy="60" r="56" fill="#fef3c7"/>
                 <!-- brush -->
-                <rect x="55" y="22" width="10" height="48" rx="4" fill="#d97706"/>
+                <rect x="55" y="22" width="10" height="48" rx="4" fill="#0a6d71"/>
                 <!-- bristles -->
-                <path d="M48 70 Q60 82 72 70" fill="none" stroke="#f5a623" stroke-width="4" stroke-linecap="round"/>
-                <path d="M50 74 Q60 88 70 74" fill="none" stroke="#d97706" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+                <path d="M48 70 Q60 82 72 70" fill="none" stroke="#0e888d" stroke-width="4" stroke-linecap="round"/>
+                <path d="M50 74 Q60 88 70 74" fill="none" stroke="#0a6d71" stroke-width="3" stroke-linecap="round" opacity=".6"/>
                 <!-- paint tin -->
-                <ellipse cx="36" cy="86" rx="16" ry="8" fill="#0a1f5c" fill-opacity=".15" stroke="#0a1f5c" stroke-width="1.5"/>
-                <rect x="20" y="72" width="32" height="14" rx="4" fill="#0a1f5c" fill-opacity=".12" stroke="#0a1f5c" stroke-width="1.5"/>
-                <ellipse cx="36" cy="72" rx="16" ry="5" fill="#f5a623" fill-opacity=".5" stroke="#d97706" stroke-width="1.5"/>
+                <ellipse cx="36" cy="86" rx="16" ry="8" fill="#13335c" fill-opacity=".15" stroke="#13335c" stroke-width="1.5"/>
+                <rect x="20" y="72" width="32" height="14" rx="4" fill="#13335c" fill-opacity=".12" stroke="#13335c" stroke-width="1.5"/>
+                <ellipse cx="36" cy="72" rx="16" ry="5" fill="#0e888d" fill-opacity=".5" stroke="#0a6d71" stroke-width="1.5"/>
               </svg>
               <div class="overlay">
                 <a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl hover:bg-gold-dark">Book Now</a>
@@ -658,13 +657,13 @@
             <div class="img-wrap">
               <svg viewBox="0 0 120 120" class="h-28 w-28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <circle cx="60" cy="60" r="56" fill="#eef2ff"/>
-                <rect x="26" y="46" width="44" height="28" rx="8" fill="#1a3a8f"/>
-                <circle cx="48" cy="60" r="10" fill="#0a1f5c" fill-opacity=".2" stroke="#0a1f5c" stroke-width="2.5"/>
-                <circle cx="48" cy="60" r="5" fill="#0a1f5c"/>
-                <path d="M70 52 L92 42M70 68 L92 78" stroke="#f5a623" stroke-width="4" stroke-linecap="round"/>
-                <line x1="44" y1="46" x2="44" y2="32" stroke="#0a1f5c" stroke-width="4" stroke-linecap="round"/>
-                <rect x="28" y="26" width="32" height="8" rx="3" fill="#f5a623"/>
-                <circle cx="86" cy="42" r="6" fill="#f5a623"/>
+                <rect x="26" y="46" width="44" height="28" rx="8" fill="#1f4f74"/>
+                <circle cx="48" cy="60" r="10" fill="#13335c" fill-opacity=".2" stroke="#13335c" stroke-width="2.5"/>
+                <circle cx="48" cy="60" r="5" fill="#13335c"/>
+                <path d="M70 52 L92 42M70 68 L92 78" stroke="#0e888d" stroke-width="4" stroke-linecap="round"/>
+                <line x1="44" y1="46" x2="44" y2="32" stroke="#13335c" stroke-width="4" stroke-linecap="round"/>
+                <rect x="28" y="26" width="32" height="8" rx="3" fill="#0e888d"/>
+                <circle cx="86" cy="42" r="6" fill="#0e888d"/>
                 <circle cx="86" cy="42" r="3" fill="#fff"/>
               </svg>
               <div class="overlay">
@@ -688,12 +687,12 @@
               <svg viewBox="0 0 120 120" class="h-28 w-28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <circle cx="60" cy="60" r="56" fill="#eef2ff"/>
                 <!-- lock body -->
-                <rect x="34" y="56" width="52" height="44" rx="8" fill="#0a1f5c" fill-opacity=".18" stroke="#0a1f5c" stroke-width="2"/>
+                <rect x="34" y="56" width="52" height="44" rx="8" fill="#13335c" fill-opacity=".18" stroke="#13335c" stroke-width="2"/>
                 <!-- shackle -->
-                <path d="M44 56 V42 a16 16 0 0 1 32 0 V56" fill="none" stroke="#f5a623" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M44 56 V42 a16 16 0 0 1 32 0 V56" fill="none" stroke="#0e888d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
                 <!-- keyhole -->
-                <circle cx="60" cy="76" r="6" fill="#0a1f5c" fill-opacity=".3" stroke="#0a1f5c" stroke-width="2"/>
-                <rect x="57" y="78" width="6" height="10" rx="2" fill="#0a1f5c" fill-opacity=".3"/>
+                <circle cx="60" cy="76" r="6" fill="#13335c" fill-opacity=".3" stroke="#13335c" stroke-width="2"/>
+                <rect x="57" y="78" width="6" height="10" rx="2" fill="#13335c" fill-opacity=".3"/>
                 <!-- wifi waves -->
                 <path d="M72 34 Q80 26 88 34" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>
                 <path d="M75 38 Q80 33 85 38" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" opacity=".5"/>
@@ -721,11 +720,11 @@
             <div class="img-wrap">
               <svg viewBox="0 0 120 120" class="h-28 w-28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <circle cx="60" cy="60" r="56" fill="#eef2ff"/>
-                <rect x="20" y="44" width="54" height="28" rx="9" fill="#1a3a8f"/>
+                <rect x="20" y="44" width="54" height="28" rx="9" fill="#1f4f74"/>
                 <rect x="74" y="52" width="18" height="12" rx="4" fill="#94a3b8"/>
                 <line x1="92" y1="58" x2="110" y2="58" stroke="#64748b" stroke-width="5" stroke-linecap="round"/>
-                <path d="M34 72 Q30 88 40 90 H54 V72" fill="#0a1f5c"/>
-                <circle cx="36" cy="58" r="7" fill="#f5a623"/>
+                <path d="M34 72 Q30 88 40 90 H54 V72" fill="#13335c"/>
+                <circle cx="36" cy="58" r="7" fill="#0e888d"/>
                 <line x1="36" y1="54" x2="36" y2="58" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
                 <line x1="48" y1="47" x2="48" y2="70" stroke="#38bdf8" stroke-width="1.5" opacity=".4"/>
                 <line x1="54" y1="47" x2="54" y2="70" stroke="#38bdf8" stroke-width="1.5" opacity=".4"/>
@@ -818,7 +817,7 @@
   <!-- ═══════════════════════════════════════════════
        FOOTER
   ════════════════════════════════════════════════ -->
-  <footer class="bg-navy-dark bg-[#061244] py-8 text-center text-xs text-white/40">
+  <footer class="bg-navy-dark bg-[#13335c] py-8 text-center text-xs text-white/40">
     <p>© 2026 LocalMistry. All rights reserved. | <a href="privacy-policy.html" class="hover:text-gold transition">Privacy Policy</a> · <a href="terms-condition.html" class="hover:text-gold transition">Terms</a></p>
   </footer>
 

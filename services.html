@@ -5,14 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO -->
-  <title>Services | LocalMistry — Book Verified Home Experts</title>
-  <meta name="description" content="Book trusted professionals for electrical, plumbing, cleaning, salon, carpentry, AC repair and more. Transparent pricing, verified experts, instant booking on LocalMistry." />
-  <meta name="keywords" content="home services, electrician near me, plumber, salon at home, cleaning service, carpenter, AC repair, LocalMistry services" />
+  <title>Services | LocalMistry — Direct Home Services in Siliguri</title>
+  <meta name="description" content="LocalMistry offers direct electrical, plumbing, AC & Cooling Services, carpentry, appliance and maintenance services in Siliguri and surrounding areas through our own team of engineers, mechanics and mistry experts." />
+  <meta name="keywords" content="electrician in siliguri, plumber in siliguri, home AC & Cooling Services service siliguri, carpenter in siliguri, ac repair siliguri, localmistry services siliguri" />
   <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="IN-WB" />
+  <meta name="geo.placename" content="Siliguri" />
 
   <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
-  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon.png" />
+  <link rel="shortcut icon" href="images/logo/favicon.png" />
 
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,8 +29,8 @@
       theme: {
         extend: {
           colors: {
-            navy: { DEFAULT: '#0a1f5c', dark: '#061244', light: '#1a3a8f' },
-            gold: { DEFAULT: '#f5a623', light: '#fbbf24', dark: '#d97706' },
+            navy: { DEFAULT: '#13335c', dark: '#13335c', light: '#1f4f74' },
+            gold: { DEFAULT: '#0e888d', light: '#35a5aa', dark: '#0a6d71' },
             sky:  '#e8f0fe',
           },
           fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
@@ -38,11 +40,11 @@
   </script>
 
   <style>
-    :focus-visible { outline: 3px solid #f5a623; outline-offset: 3px; }
+    :focus-visible { outline: 3px solid #0e888d; outline-offset: 3px; }
 
     /* scrollbar */
     ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-thumb { background: #f5a623; border-radius: 99px; }
+    ::-webkit-scrollbar-thumb { background: #0e888d; border-radius: 99px; }
 
     /* ── Tab filter (reused from products) ── */
     .tab-btn {
@@ -58,15 +60,15 @@
       transition: color .22s, background .22s, border-color .22s, transform .18s;
       white-space: nowrap;
     }
-    .tab-btn:hover { color: #f5a623; border-color: #f5a623; transform: translateY(-1px); }
+    .tab-btn:hover { color: #0e888d; border-color: #0e888d; transform: translateY(-1px); }
     .tab-btn.active {
-      background: #f5a623;
+      background: #0e888d;
       color: #fff;
-      border-color: #f5a623;
+      border-color: #0e888d;
       box-shadow: 0 6px 20px rgba(245,166,35,.35);
     }
     .dark .tab-btn { color: #94a3b8; }
-    .dark .tab-btn:hover { color: #f5a623; }
+    .dark .tab-btn:hover { color: #0e888d; }
 
     /* ── Service card (reuses p-card styles) ── */
     .p-card {
@@ -94,7 +96,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 160px;
+      height: 212px;
     }
     .dark .p-card .img-wrap { background: #0f172a; }
 
@@ -133,7 +135,7 @@
 
     /* Hero (reused gradient) */
     .services-hero {
-      background: linear-gradient(135deg, #0a1f5c 0%, #1a3a8f 60%, #0a1f5c 100%);
+      background: linear-gradient(135deg, #13335c 0%, #1f4f74 60%, #13335c 100%);
       position: relative; overflow: hidden;
     }
     .services-hero::before {
@@ -143,7 +145,7 @@
 
     #loader {
       position: fixed; top: 0; left: 0; height: 3px;
-      background: linear-gradient(90deg, #f5a623, #fbbf24);
+      background: linear-gradient(90deg, #0e888d, #35a5aa);
       z-index: 9999; animation: loadBar .8s ease forwards;
     }
     @keyframes loadBar { from { width: 0; } to { width: 100%; opacity: 0; } }
@@ -161,25 +163,24 @@
   <div id="loader" aria-hidden="true"></div>
 
   <!-- NAVBAR (identical structure, Services active) -->
-  <header class="sticky top-0 z-50 bg-navy shadow-lg">
+  <header class="sticky top-0 z-50 bg-white shadow-lg">
     <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8" aria-label="Primary navigation">
-      <a href="index.html" class="flex items-center gap-2" aria-label="LocalMistry home">
-        <img src="images/logo-60x60.png" alt="LocalMistry logo" class="h-9 w-9 rounded-lg object-cover" width="36" height="36" />
-        <span class="text-lg font-extrabold text-white tracking-tight">Local<span class="text-gold">Mistry</span></span>
+      <a href="index.html" class="flex items-center" aria-label="LocalMistry home">
+        <img src="images/logo/logo-horizontal.png" alt="LocalMistry logo" class="h-9 w-auto object-contain" />
       </a>
 
       <!-- Desktop nav -->
       <div class="hidden items-center gap-6 lg:flex">
-        <a href="index.html"    class="text-sm font-medium text-white/80 transition hover:text-gold">Home</a>
-        <a href="services.html" class="text-sm font-semibold text-gold border-b-2 border-gold pb-0.5">Services</a>
-        <a href="products.html" class="text-sm font-medium text-white/80 transition hover:text-gold">Products</a>
-        <a href="aboutus.html"  class="text-sm font-medium text-white/80 transition hover:text-gold">About</a>
-        <a href="contact.html"  class="text-sm font-medium text-white/80 transition hover:text-gold">Contact</a>
+        <a href="index.html"    class="text-sm font-medium text-slate-700 transition hover:text-[#0e888d]">Home</a>
+        <a href="services.html" class="text-sm font-semibold text-[#0e888d] border-b-2 border-[#0e888d] pb-0.5">Services</a>
+        <a href="products.html" class="text-sm font-medium text-slate-700 transition hover:text-[#0e888d]">Products</a>
+        <a href="aboutus.html"  class="text-sm font-medium text-slate-700 transition hover:text-[#0e888d]">About</a>
+        <a href="contact.html"  class="text-sm font-medium text-slate-700 transition hover:text-[#0e888d]">Contact</a>
       </div>
 
       <div class="hidden items-center gap-3 lg:flex">
         <button id="theme-toggle" type="button" aria-label="Toggle dark mode"
-                class="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20">
+                class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-700 transition hover:bg-slate-200">
           <svg id="icon-moon" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
           <svg id="icon-sun" class="hidden h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
         </button>
@@ -188,11 +189,11 @@
 
       <!-- Mobile -->
       <div class="flex items-center gap-2 lg:hidden">
-        <button id="theme-toggle-mob" type="button" aria-label="Toggle dark mode" class="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white">
+        <button id="theme-toggle-mob" type="button" aria-label="Toggle dark mode" class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-700">
           <svg id="icon-moon-mob" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
           <svg id="icon-sun-mob" class="hidden h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
         </button>
-        <button id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" class="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white">
+        <button id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-700">
           <svg id="ham-open" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
           <svg id="ham-close" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
@@ -200,17 +201,17 @@
     </nav>
 
     <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden border-t border-white/10 bg-navy px-4 pb-5 pt-3 lg:hidden">
+    <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white px-4 pb-5 pt-3 lg:hidden">
       <ul class="space-y-1">
-        <li><a href="index.html"    class="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-gold">Home</a></li>
-        <li><a href="services.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-gold bg-white/10">Services</a></li>
-        <li><a href="products.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-gold">Products</a></li>
-        <li><a href="aboutus.html"  class="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-gold">About</a></li>
-        <li><a href="contact.html"  class="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-gold">Contact</a></li>
+        <li><a href="index.html"    class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-[#0e888d]">Home</a></li>
+        <li><a href="services.html" class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-[#0e888d] bg-slate-100">Services</a></li>
+        <li><a href="products.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-[#0e888d]">Products</a></li>
+        <li><a href="aboutus.html"  class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-[#0e888d]">About</a></li>
+        <li><a href="contact.html"  class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-[#0e888d]">Contact</a></li>
       </ul>
       <div class="mt-4 flex gap-3">
-        <a href="contact.html" class="flex-1 rounded-full border border-gold py-2.5 text-center text-sm font-semibold text-gold">Login</a>
-        <a href="contact.html" class="flex-1 rounded-full bg-gold py-2.5 text-center text-sm font-semibold text-white">Get a Quote</a>
+        <a href="contact.html" class="flex-1 rounded-full border border-[#0e888d] py-2.5 text-center text-sm font-semibold text-[#0e888d]">Login</a>
+        <a href="contact.html" class="flex-1 rounded-full bg-[#0e888d] py-2.5 text-center text-sm font-semibold text-white">Get a Quote</a>
       </div>
     </div>
   </header>
@@ -227,12 +228,22 @@
         </nav>
 
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
-          Expert Services.<br class="hidden sm:block" /> <span class="text-gold">Book in Seconds.</span>
+          Direct Professional Services<br class="hidden sm:block" /> <span class="text-gold">in Siliguri.</span>
         </h1>
-        <p class="mt-4 max-w-2xl mx-auto text-base text-white/70">Verified professionals. Transparent pricing. On-time arrival guaranteed.</p>
+        <p class="mt-4 max-w-2xl mx-auto text-base text-white/70">We provide direct home and interior services across Siliguri, including Carpenter & Modular Doors, Electrical, Interior, Painter, Construction, Plumber, Marble & Tiles, False Ceiling, and CCTV & Locks.</p>
+        <div class="mt-6 flex flex-wrap justify-center gap-2">
+          <span class="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white/80">Siliguri • Matigara • Jalpaiguri</span>
+          <span class="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white/80">Bagdogra • Naxalbari • Darjeeling</span>
+        </div>
+        <div class="mt-4 flex flex-wrap justify-center gap-3 text-xs font-semibold text-gold/95">
+          <span>#SiliguriElectrician</span>
+          <span>#SiliguriPlumber</span>
+          <span>#HomeAC & Cooling ServicesSiliguri</span>
+          <span>#LocalMistry</span>
+        </div>
 
         <div class="mt-10 flex flex-wrap justify-center gap-6 sm:gap-12">
-          <div class="text-center"><p class="text-3xl font-extrabold text-gold">50+</p><p class="mt-0.5 text-xs text-white/60 uppercase tracking-widest">Services</p></div>
+          <div class="text-center"><p class="text-3xl font-extrabold text-gold">9</p><p class="mt-0.5 text-xs text-white/60 uppercase tracking-widest">Services</p></div>
           <div class="text-center"><p class="text-3xl font-extrabold text-gold">4.9★</p><p class="mt-0.5 text-xs text-white/60 uppercase tracking-widest">Avg Rating</p></div>
           <div class="text-center"><p class="text-3xl font-extrabold text-gold">15k+</p><p class="mt-0.5 text-xs text-white/60 uppercase tracking-widest">Bookings</p></div>
           <div class="text-center"><p class="text-3xl font-extrabold text-gold">45 min</p><p class="mt-0.5 text-xs text-white/60 uppercase tracking-widest">Avg Arrival</p></div>
@@ -246,15 +257,18 @@
 
         <!-- Filters -->
         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-10">
-          <div class="overflow-x-auto pb-1 -mb-1 pt-2">
-            <div class="flex gap-2 min-w-max" role="tablist" id="tab-bar">
-              <button class="tab-btn active" data-filter="all" role="tab" aria-selected="true">All Services</button>
-              <button class="tab-btn" data-filter="electrical"  role="tab" aria-selected="false">⚡ Electrical</button>
-              <button class="tab-btn" data-filter="plumbing"    role="tab" aria-selected="false">🔧 Plumbing</button>
-              <button class="tab-btn" data-filter="cleaning"    role="tab" aria-selected="false">🧹 Cleaning</button>
-              <button class="tab-btn" data-filter="beauty"      role="tab" aria-selected="false">💇 Beauty</button>
-              <button class="tab-btn" data-filter="carpentry"   role="tab" aria-selected="false">🪚 Carpentry</button>
-              <button class="tab-btn" data-filter="appliance"   role="tab" aria-selected="false">🔧 Appliance</button>
+          <div class="pb-1 -mb-1 pt-2 w-full sm:w-auto">
+            <div class="flex flex-wrap gap-2" role="tablist" id="tab-bar">
+              <button class="tab-btn active" data-filter="all" role="tab" aria-selected="true">☰ All Services</button>
+              <button class="tab-btn" data-filter="carpenter-modular" role="tab" aria-selected="false">🪵 Carpenter & Modular Doors</button>
+              <button class="tab-btn" data-filter="electrical" role="tab" aria-selected="false">⚡ Electrical</button>
+              <button class="tab-btn" data-filter="interior" role="tab" aria-selected="false">🛋️ Interior</button>
+              <button class="tab-btn" data-filter="painter" role="tab" aria-selected="false">🎨 Painter</button>
+              <button class="tab-btn" data-filter="construction" role="tab" aria-selected="false">🏗️ Construction</button>
+              <button class="tab-btn" data-filter="plumber" role="tab" aria-selected="false">💧 Plumber</button>
+              <button class="tab-btn" data-filter="marble-tiles" role="tab" aria-selected="false">🪨 Marble & Tiles</button>
+              <button class="tab-btn" data-filter="false-ceiling" role="tab" aria-selected="false">☁️ False Ceiling</button>
+              <button class="tab-btn" data-filter="cctv-locks" role="tab" aria-selected="false">📹 CCTV & Locks</button>
             </div>
           </div>
 
@@ -263,8 +277,6 @@
             <select id="sort-select" aria-label="Sort services"
                     class="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-gold dark:bg-slate-800 dark:border-slate-700 dark:text-slate-300">
               <option value="default">Sort: Popular</option>
-              <option value="price-asc">Price: Low to High</option>
-              <option value="price-desc">Price: High to Low</option>
               <option value="rating">Top Rated</option>
             </select>
           </div>
@@ -272,157 +284,1195 @@
 
         <!-- Service Grid -->
         <div id="product-grid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-
-          <!-- Electrical -->
-          <div class="p-card" data-category="electrical" data-price="349" data-rating="5">
+          <div class="p-card" data-category="carpenter-modular" data-rating="5">
             <div class="img-wrap">
-              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><path d="M66 28L42 68h18L48 100l38-42H68L66 28z" fill="#f5a623"/></svg>
+              <img src="images/services/Carpenter_installing_wooden_ward…_202607261749.jpeg" alt="Custom Wardrobe Installation" class="h-full w-full object-cover" />
               <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
             </div>
             <div class="flex flex-col flex-1 p-5">
-              <div class="flex items-center justify-between">
-                <span class="badge bg-gold/15 text-gold">Most Booked</span>
-                <span class="text-xs text-gold">★★★★★</span>
-              </div>
-              <h3 class="mt-3 font-bold text-navy dark:text-white">Electrical Safety Check</h3>
-              <p class="mt-1 text-xs text-slate-500 dark:text-slate-400 flex-1">Full home wiring inspection + minor fixes. Includes report.</p>
-              <div class="mt-3 flex items-baseline justify-between text-sm">
-                <span class="font-bold text-navy dark:text-white">From ₹349</span>
-                <span class="text-xs text-slate-400">45 min</span>
-              </div>
+              <div class="flex items-center justify-between"><span class="badge bg-amber-100 text-amber-700">Custom</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Custom Wardrobe Installation</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Built-in wardrobe design</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Sliding and hinged options</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Storage optimization and finish</li>
+              </ul>
               <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
             </div>
           </div>
 
-          <div class="p-card" data-category="electrical" data-price="599" data-rating="4">
+          <div class="p-card" data-category="carpenter-modular" data-rating="5">
             <div class="img-wrap">
-              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><rect x="35" y="32" width="50" height="56" rx="6" fill="#0a1f5c" fill-opacity=".15" stroke="#0a1f5c" stroke-width="2"/><circle cx="60" cy="52" r="7" fill="#f5a623"/></svg>
+              <img src="images/services/Modern_TV_unit_floating_console_202607261824.jpeg" alt="Modern TV Unit" class="h-full w-full object-cover" />
               <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
             </div>
             <div class="flex flex-col flex-1 p-5">
-              <div class="flex items-center justify-between">
-                <span class="badge bg-blue-100 text-blue-700">Fast</span>
-                <span class="text-xs text-gold">★★★★☆</span>
-              </div>
-              <h3 class="mt-3 font-bold text-navy dark:text-white">Switchboard &amp; MCB Replacement</h3>
-              <p class="mt-1 text-xs text-slate-500 dark:text-slate-400 flex-1">Upgrade old switches, MCBs and distribution boards.</p>
-              <div class="mt-3 flex items-baseline justify-between text-sm">
-                <span class="font-bold text-navy dark:text-white">From ₹599</span>
-                <span class="text-xs text-slate-400">60 min</span>
-              </div>
+              <div class="flex items-center justify-between"><span class="badge bg-amber-100 text-amber-700">Custom</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">TV Unit Installation</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Wall-mounted TV panel setup</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Storage and display unit fitting</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Cable management and finish</li>
+              </ul>
               <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
             </div>
           </div>
 
-          <!-- Plumbing -->
-          <div class="p-card" data-category="plumbing" data-price="299" data-rating="5">
+          <div class="p-card" data-category="carpenter-modular" data-rating="5">
             <div class="img-wrap">
-              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><path d="M40 40 L80 80 M40 80 L80 40" stroke="#0a1f5c" stroke-width="8" stroke-linecap="round"/><circle cx="60" cy="60" r="14" fill="#f5a623"/></svg>
+              <img src="images/services/Modern_modular_kitchen_design_202607261826.jpeg" alt=" Modular Kitchen Cabinets" class="h-full w-full object-cover" />
               <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
             </div>
             <div class="flex flex-col flex-1 p-5">
-              <div class="flex items-center justify-between">
-                <span class="badge bg-emerald-100 text-emerald-700">Instant</span>
-                <span class="text-xs text-gold">★★★★★</span>
-              </div>
-              <h3 class="mt-3 font-bold text-navy dark:text-white">Tap &amp; Leak Repair</h3>
-              <p class="mt-1 text-xs text-slate-500 dark:text-slate-400 flex-1">Fix dripping taps, leaking pipes and minor clogs.</p>
-              <div class="mt-3 flex items-baseline justify-between text-sm">
-                <span class="font-bold text-navy dark:text-white">From ₹299</span>
-                <span class="text-xs text-slate-400">30 min</span>
-              </div>
+              <div class="flex items-center justify-between"><span class="badge bg-amber-100 text-amber-700">Custom</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Modular Kitchen Cabinets</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Kitchen cabinet layout and fitting</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Hinges, shutters and accessories</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Modern storage solutions</li>
+              </ul>
               <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
             </div>
           </div>
 
-          <div class="p-card" data-category="plumbing" data-price="799" data-rating="4">
+          <div class="p-card" data-category="carpenter-modular" data-rating="5">
             <div class="img-wrap">
-              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><path d="M35 70 Q60 45 85 70" stroke="#0a1f5c" stroke-width="10" fill="none"/><path d="M45 82 L75 82" stroke="#f5a623" stroke-width="6" stroke-linecap="round"/></svg>
+              <img src="images/services/Wooden_partition_screen_laser-cu…_202607261835.jpeg" alt="Wooden Partition" class="h-full w-full object-cover" />
               <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
             </div>
             <div class="flex flex-col flex-1 p-5">
-              <div class="flex items-center justify-between"><span class="badge bg-gold/15 text-gold">Popular</span><span class="text-xs text-gold">★★★★☆</span></div>
-              <h3 class="mt-3 font-bold text-navy dark:text-white">Full Bathroom Plumbing</h3>
-              <p class="mt-1 text-xs text-slate-500 dark:text-slate-400 flex-1">Shower, sink, toilet installation &amp; repair.</p>
-              <div class="mt-3 flex items-baseline justify-between text-sm">
-                <span class="font-bold text-navy dark:text-white">From ₹799</span>
-                <span class="text-xs text-slate-400">90 min</span>
-              </div>
+              <div class="flex items-center justify-between"><span class="badge bg-amber-100 text-amber-700">Custom</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Wooden Partition</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Room divider and office partition</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Durable woodwork with finish</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Custom size and style options</li>
+              </ul>
               <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
             </div>
           </div>
 
-          <!-- Cleaning -->
-          <div class="p-card" data-category="cleaning" data-price="999" data-rating="5">
+          <div class="p-card" data-category="carpenter-modular" data-rating="5">
             <div class="img-wrap">
-              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><rect x="32" y="38" width="56" height="44" rx="4" fill="#0a1f5c" fill-opacity=".1" stroke="#0a1f5c"/><path d="M40 52 L80 52 M40 64 L70 64" stroke="#f5a623" stroke-width="5" stroke-linecap="round"/></svg>
+              <img src="images/services/Worker_installing_wood_wall_panels_202607261837.jpeg" alt="Wall Shelves" class="h-full w-full object-cover" />
               <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
             </div>
             <div class="flex flex-col flex-1 p-5">
-              <div class="flex items-center justify-between"><span class="badge bg-emerald-100 text-emerald-700">Top Rated</span><span class="text-xs text-gold">★★★★★</span></div>
-              <h3 class="mt-3 font-bold text-navy dark:text-white">Deep Home Cleaning</h3>
-              <p class="mt-1 text-xs text-slate-500 dark:text-slate-400 flex-1">Complete 2BHK deep clean with eco products.</p>
-              <div class="mt-3 flex items-baseline justify-between text-sm">
-                <span class="font-bold text-navy dark:text-white">From ₹999</span>
-                <span class="text-xs text-slate-400">3 hrs</span>
-              </div>
+              <div class="flex items-center justify-between"><span class="badge bg-amber-100 text-amber-700">Custom</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Wall Shelves</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Floating shelves and display units</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Living room and bedroom storage</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Custom size and finish</li>
+              </ul>
               <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
             </div>
           </div>
 
-          <!-- Beauty -->
-          <div class="p-card" data-category="beauty" data-price="449" data-rating="5">
+          <div class="p-card" data-category="carpenter-modular" data-rating="5">
             <div class="img-wrap">
-              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#fef3c7"/><circle cx="60" cy="55" r="18" fill="#f5a623"/><path d="M42 82 Q60 95 78 82" stroke="#d97706" stroke-width="6" fill="none"/></svg>
+              <img src="images/services/Wooden_shoe_cabinet_narrow_corridor_202607261841.jpeg" alt="Shoe Rack Installation" class="h-full w-full object-cover" />
               <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
             </div>
             <div class="flex flex-col flex-1 p-5">
-              <div class="flex items-center justify-between"><span class="badge bg-pink-100 text-pink-700">At Home</span><span class="text-xs text-gold">★★★★★</span></div>
-              <h3 class="mt-3 font-bold text-navy dark:text-white">Salon at Home</h3>
-              <p class="mt-1 text-xs text-slate-500 dark:text-slate-400 flex-1">Haircut, facial, manicure &amp; pedicure by experts.</p>
-              <div class="mt-3 flex items-baseline justify-between text-sm">
-                <span class="font-bold text-navy dark:text-white">From ₹449</span>
-                <span class="text-xs text-slate-400">60 min</span>
-              </div>
+              <div class="flex items-center justify-between"><span class="badge bg-amber-100 text-amber-700">Custom</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Shoe Rack Installation</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Entryway and bedroom storage</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Open and closed rack options</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Space-saving woodwork</li>
+              </ul>
               <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
             </div>
           </div>
 
-          <!-- Carpentry & Appliance -->
-          <div class="p-card" data-category="carpentry" data-price="599" data-rating="4">
+          <div class="p-card" data-category="carpenter-modular" data-rating="5">
             <div class="img-wrap">
-              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><rect x="38" y="40" width="44" height="40" rx="3" fill="#0a1f5c" fill-opacity=".15" stroke="#0a1f5c"/><line x1="48" y1="52" x2="72" y2="52" stroke="#f5a623" stroke-width="4"/><line x1="48" y1="62" x2="72" y2="62" stroke="#f5a623" stroke-width="4"/></svg>
+              <img src="images/services/Wooden_ceiling_panels_Indian_liv…_202607261849.jpeg" alt="Wooden Ceiling Panels" class="h-full w-full object-cover" />
               <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
             </div>
             <div class="flex flex-col flex-1 p-5">
-              <div class="flex items-center justify-between"><span class="badge bg-amber-100 text-amber-700">Custom</span><span class="text-xs text-gold">★★★★☆</span></div>
-              <h3 class="mt-3 font-bold text-navy dark:text-white">Carpentry &amp; Furniture Repair</h3>
-              <p class="mt-1 text-xs text-slate-500 dark:text-slate-400 flex-1">Door repair, shelf fitting, furniture assembly.</p>
-              <div class="mt-3 flex items-baseline justify-between text-sm">
-                <span class="font-bold text-navy dark:text-white">From ₹599</span>
-                <span class="text-xs text-slate-400">60-90 min</span>
-              </div>
+              <div class="flex items-center justify-between"><span class="badge bg-amber-100 text-amber-700">Custom</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Wooden Ceiling Panels</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Ceiling panel installation</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Decorative wood finish</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Accent and acoustic options</li>
+              </ul>
               <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
             </div>
           </div>
 
-          <div class="p-card" data-category="appliance" data-price="449" data-rating="5">
+          <div class="p-card" data-category="carpenter-modular" data-rating="5">
             <div class="img-wrap">
-              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><rect x="34" y="36" width="52" height="48" rx="6" fill="#0a1f5c" fill-opacity=".12" stroke="#0a1f5c"/><circle cx="60" cy="60" r="12" fill="#f5a623"/></svg>
+              <img src="images/services/Worker_installing_wood_wall_panels_202607261852.jpeg" alt="Wall Shelves" class="h-full w-full object-cover" />
               <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
             </div>
             <div class="flex flex-col flex-1 p-5">
-              <div class="flex items-center justify-between"><span class="badge bg-sky-100 text-sky-700">Same Day</span><span class="text-xs text-gold">★★★★★</span></div>
-              <h3 class="mt-3 font-bold text-navy dark:text-white">AC &amp; Geyser Service</h3>
-              <p class="mt-1 text-xs text-slate-500 dark:text-slate-400 flex-1">Gas top-up, filter clean, installation &amp; repair.</p>
-              <div class="mt-3 flex items-baseline justify-between text-sm">
-                <span class="font-bold text-navy dark:text-white">From ₹449</span>
-                <span class="text-xs text-slate-400">45 min</span>
-              </div>
+              <div class="flex items-center justify-between"><span class="badge bg-amber-100 text-amber-700">Custom</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Furniture Refurbishment</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Repair and polishing</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Repainting and reassembly</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Restoration of old furniture</li>
+              </ul>
               <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
             </div>
           </div>
 
+          <div class="p-card" data-category="electrical" data-rating="5">
+            <div class="img-wrap">              
+              <img src="images/services/Electrician_rewiring_house_elect…_202607261920.jpeg" alt="Complete House Rewiring" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-gold/15 text-gold">Fast</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Complete House Rewiring</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Full rewiring for new and old homes</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Safe wiring layout and insulation</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Electrical load planning and testing</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="electrical" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/Male_worker_replacing_switches_s…_202607261940.jpeg" alt="New Electrical Points" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-gold/15 text-gold">Fast</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">New Electrical Points</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">New plug points and power outlets</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Kitchen, bedroom and living room setup</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Neat cabling and safe installation</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="electrical" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/Worker_replacing_electrical_switch_202607261942.jpeg" alt="Switch & Socket Replacement" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-gold/15 text-gold">Fast</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Switch & Socket Replacement</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Socket and switch upgrade service</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Modern modular fittings</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Reliable and safe replacement work</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="electrical" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/4.jpeg" alt="LED Lighting Installation" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-gold/15 text-gold">Fast</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">LED Lighting Installation</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Energy-efficient LED fitting</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Indoor and outdoor lighting setup</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Brighter, modern illumination</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="electrical" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/Male_worker_testing_pendant_lights_202607262004.jpeg" alt="Decorative Lighting" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-gold/15 text-gold">Fast</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Decorative Lighting</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Cove, spotlight and feature lighting</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Accent installation for interiors</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Stylish and elegant finish</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="electrical" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/Man_installing_smart_home_panel_202607262038.jpeg" alt="Smart Home Wiring" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-gold/15 text-gold">Fast</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Smart Home Wiring</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Smart switch and automation wiring</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Compatible setup for modern devices</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Clean and future-ready installation</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="electrical" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/Indian_worker_installing_smart_s…_202607262105.jpeg" alt="Smart Switch Installation" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-gold/15 text-gold">Fast</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Distribution Board Upgrade</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Board replacement and modern safety</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">MCB and circuit protection upgrade</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Improved reliability and protection</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="interior" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/Worker_installing_wood_wall_panels_202607262108.jpeg" alt="Wood Wall Panels Installation" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-sky-100 text-sky-700">Design</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Interior Design</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Complete home styling and layout planning</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Theme-based concepts for every room</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Furniture and decor coordination</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="interior" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/Modular_kitchen_with_oak_cabinetry_202607262111.jpeg" alt="Modular Kitchen" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-sky-100 text-sky-700">Design</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Modular Kitchen</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Smart storage and modern kitchen layouts</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Cabinet, countertop and finish options</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Functional design with premium detailing</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="interior" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/Stylish_wooden_wardrobe_bedroom_202607262112.jpeg" alt="Wardrobe Design" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-sky-100 text-sky-700">Design</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Wardrobe Design</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Custom wardrobe planning and style</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Sliding, hinged and open wardrobe options</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Elegant storage with premium finishes</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="interior" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/Modern_TV_unit_floating_console_202607262113.jpeg" alt="TV Unit Design" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-sky-100 text-sky-700">Design</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">TV Unit Design</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Wall-mounted and floating TV units</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Integrated storage and display space</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Designed for modern living rooms</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="interior" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/False_ceiling_design_master_bedroom_202607262114.jpeg" alt="False Ceiling Design" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-sky-100 text-sky-700">Design</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">False Ceiling Design</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Stylish ceiling concepts and layout</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Layered and decorative ceiling options</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Integrated lighting with elegant finish</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="interior" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/Worker_installing_wood_wall_panels_202607262115.jpeg" alt="Wood Wall Panels Installation" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-sky-100 text-sky-700">Design</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Wall Panel Installation</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Decorative wall panels and textures</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Premium material and finish options</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Clean installation for feature walls</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="interior" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/Male_worker_testing_pendant_lights_202607262004.jpeg" alt="Decorative Lighting" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-sky-100 text-sky-700">Design</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Decorative Lighting</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Feature lighting for mood and style</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Accent lights for walls and ceilings</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Elegant design with smart control options</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="painter" data-rating="4">
+            <div class="img-wrap">
+              <img src="images/services/Painter_applying_paint_interior_…_202607262116.jpeg" alt="Wall Painting" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-emerald-100 text-emerald-700">Finish</span><span class="text-xs text-gold">★★★★☆</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Wall Painting</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Interior wall prep and paint</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Smooth finish with premium paints</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Quick and clean service</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="painter" data-rating="4">
+            <div class="img-wrap">
+              <img src="images/services/Male_worker_painting_ceiling_202607262119.jpeg" alt="Ceiling Painting" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-emerald-100 text-emerald-700">Finish</span><span class="text-xs text-gold">★★★★☆</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Ceiling Painting</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Ceiling patching and primer</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Crack-free finish and clean look</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Suitable for living and bedroom spaces</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="painter" data-rating="4">
+            <div class="img-wrap">
+             <img src="images/services/Male_worker_painting_wall_texture_202607262144.jpeg" alt="Texture Painting" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-emerald-100 text-emerald-700">Finish</span><span class="text-xs text-gold">★★★★☆</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Texture Painting</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Decorative texture and effect paint</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Elegant wall finish for feature areas</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Custom design support</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="painter" data-rating="4">
+            <div class="img-wrap">
+              <img src="images/services/Worker_applying_wall_coating_house_202607262146.jpeg" alt="Exterior Wall Coating" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-emerald-100 text-emerald-700">Finish</span><span class="text-xs text-gold">★★★★☆</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Exterior Wall Coating</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Weatherproof exterior paint</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Protection from sun and rain</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Fresh look for building facades</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="painter" data-rating="4">
+            <div class="img-wrap">
+              <img src="images/services/Indian_male_worker_applying_finish_202607262151.jpeg" alt="Wood Polish & Finish" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-emerald-100 text-emerald-700">Finish</span><span class="text-xs text-gold">★★★★☆</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Wood Polish & Finish</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Furniture and wood surface polishing</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Gloss or matte finishing</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Restoration and protection</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="painter" data-rating="4">
+            <div class="img-wrap">
+              <img src="images/services/Worker_applying_venetian_plaster_202607262153.jpeg" alt="Crack Filling & Putty" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-emerald-100 text-emerald-700">Finish</span><span class="text-xs text-gold">★★★★☆</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Crack Filling & Putty</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Surface filling and wall smoothing</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Pre-paint surface preparation</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Perfect base for paint finish</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="painter" data-rating="4">
+            <div class="img-wrap">
+              <img src="images/services/Worker_applying_exterior_coating…_202607262154.jpeg" alt="Waterproof Painting" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-emerald-100 text-emerald-700">Finish</span><span class="text-xs text-gold">★★★★☆</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Waterproof Painting</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Moisture-resistant paint coating</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Protects kitchen and bathroom walls</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Durable finish with long life</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="painter" data-rating="4">
+            <div class="img-wrap">
+              <img src="images/services/Worker_applying_exterior_coating…_202607262154.jpeg" alt="Color Consultancy & Painting" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-emerald-100 text-emerald-700">Finish</span><span class="text-xs text-gold">★★★★☆</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Color Consultancy & Painting</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Color selection guidance</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Professional paint finish recommendation</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Style matching for your space</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="construction" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/House_construction_site_India_202607271134.jpeg" alt="House Construction" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-gold/15 text-gold">Build</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">House Construction</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Full house construction support</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Planning, execution and finishing</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Reliable project delivery</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="construction" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/Renovation_&_Remodeling_202607271142.jpeg" alt="Renovation & Remodeling" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-gold/15 text-gold">Build</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Renovation & Remodeling</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Interior and exterior renovation</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Room redesign and structural updates</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Modern finish and better function</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="construction" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/House_construction_site_India_202607271143.jpeg" alt="Civil Work" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-gold/15 text-gold">Build</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Civil Work</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Foundation and civil support</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Brickwork and structural assistance</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">On-site project coordination</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="construction" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/House_construction_site_India_202607271145.jpeg" alt="Shuttering & Formwork" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-gold/15 text-gold">Build</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Shuttering & Formwork</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Concrete formwork support</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Precise alignment and structure setup</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Reliable site execution</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="construction" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/Male_worker_laying_bricks_constr…_202607271148.jpeg" alt="Brickwork & Plastering" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-gold/15 text-gold">Build</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Brickwork & Plastering</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Wall construction and plaster finish</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Smooth and neat surfaces</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Quality finishing for new spaces</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="construction" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/Craftsman_setting_floor_tiles_202607271151.jpeg" alt="Flooring & Tiling Support" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-gold/15 text-gold">Build</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Flooring & Tiling Support</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Base preparation and tiling coordination</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Clean finishing for floors</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Support for new construction</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="construction" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/Male_worker_applying_waterproofi…_202607271156.jpeg" alt="Roofing & Waterproofing" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-gold/15 text-gold">Build</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Roofing & Waterproofing</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Roof work and waterproofing layers</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Leak prevention and protective coating</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Durable outdoor coverage</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="construction" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/Indian_worker_inspecting_roof_202607280824.jpeg" alt="Project Supervision" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-gold/15 text-gold">Build</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Project Supervision</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Site monitoring and milestone tracking</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Supervision for quality and timing</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Smooth execution from start to finish</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="plumber" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/Plumber_using_leak_detection_device_202607281028.jpeg" alt="Leak Detection & Repair" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-sky-100 text-sky-700">Reliable</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Leak Detection & Repair</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Fast leak tracing and fix</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Pipe and joint repair</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Water-saving solutions</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="plumber" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/Indian_plumber_arranging_bathroom-202607281059.jpeg" alt="Bathroom Fittings" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-sky-100 text-sky-700">Reliable</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Bathroom Fittings</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Tap, shower and basin fitting</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Bathroom pipe and fixture setup</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Neat and durable installation</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="plumber" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/Plumber_clearing_kitchen_sink_drain_202607281030.jpeg" alt="Kitchen Plumbing" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-sky-100 text-sky-700">Reliable</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Kitchen Plumbing</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Sink and countertop plumbing</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Garbage disposal and water line setup</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Modern kitchen pipework</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="plumber" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/Indian_male_worker_positioning_w…_202607281048.jpeg" alt="Water Tank Installation" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-sky-100 text-sky-700">Reliable</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Water Tank Installation</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Tank fitting and pipeline setup</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Overflow and outlet connections</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Safe water storage solutions</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="plumber" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/Indian_male_worker_clearing_pipe_202607281057.jpeg" alt="Drain Cleaning" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-sky-100 text-sky-700">Reliable</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Drain Cleaning</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Blocked drain clearing</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Bathroom and kitchen drainage service</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Fast and hygienic cleanup</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="plumber" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/Plumber_installing_PVC_pipes_202607281058.jpeg" alt="Pipe Replacement" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-sky-100 text-sky-700">Reliable</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Pipe Replacement</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Old pipe replacement and upgrade</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Corrosion-free plumbing solution</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Long-term reliability</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="plumber" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/Indian_plumber_arranging_bathroom-202607281059.jpeg" alt="Tap & Mixer Installation" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-sky-100 text-sky-700">Reliable</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Tap & Mixer Installation</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Modern taps and mixers</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Leak-free installation</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Bathroom and kitchen upgrade</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="plumber" data-rating="5">
+            <div class="img-wrap">
+              <img src="images/services/Indian_male_worker_inspecting_ma_202607281100.jpeg" alt="Sewage & Drainage Work" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-sky-100 text-sky-700">Reliable</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Sewage & Drainage Work</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Drainage line inspection</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Sewage pipe repair and fitting</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Long-lasting plumbing support</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="marble-tiles" data-rating="4">
+            <div class="img-wrap">
+              <img src="images/services/Male_worker_laying_vitrified_tiles_202607281114.jpeg" alt="Floor Tiling" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-amber-100 text-amber-700">Premium</span><span class="text-xs text-gold">★★★★☆</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Floor Tiling</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Tile layout and floor fitting</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Durable and neat finishing</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">For kitchens, halls and bathrooms</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="marble-tiles" data-rating="4">
+            <div class="img-wrap">
+              <img src="images/services/Indian_worker_applying_adhesive_…_202607281116.jpeg" alt="Wall Tiling" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-amber-100 text-amber-700">Premium</span><span class="text-xs text-gold">★★★★☆</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Wall Tiling</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Bathroom and kitchen wall tiles</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Water-resistant finish</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Modern style and clean grout</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="marble-tiles" data-rating="4">
+            <div class="img-wrap">
+              <img src="images/services/Indian_worker_polishing_marble_f…_202607281148.jpeg" alt="Marble Polishing" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-amber-100 text-amber-700">Premium</span><span class="text-xs text-gold">★★★★☆</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Marble Polishing</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Polished marble restoration</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Glossy shine and smooth finish</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Perfect for living and entry spaces</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="marble-tiles" data-rating="4">
+            <div class="img-wrap">
+              <img src="images/services/Indian_worker_installing_granite_202607281149.jpeg" alt="Granite Installation" class="h-full w-full object-cover" />
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-amber-100 text-amber-700">Premium</span><span class="text-xs text-gold">★★★★☆</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Granite Installation</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Granite countertop and flooring work</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Premium stone fitting</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Strong and elegant finish</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="marble-tiles" data-rating="4">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><rect x="34" y="34" width="52" height="52" rx="6" fill="#13335c" fill-opacity=".12" stroke="#13335c"/><path d="M44 46h32M44 60h32M44 74h32" stroke="#0e888d" stroke-width="4" stroke-linecap="round"/></svg>
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-amber-100 text-amber-700">Premium</span><span class="text-xs text-gold">★★★★☆</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Tile Repair & Replacement</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Damaged tile replacement</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Crack and chip repair</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Quick restoration with matching finish</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="marble-tiles" data-rating="4">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><rect x="34" y="34" width="52" height="52" rx="6" fill="#13335c" fill-opacity=".12" stroke="#13335c"/><path d="M44 46h32M44 60h32M44 74h32" stroke="#0e888d" stroke-width="4" stroke-linecap="round"/></svg>
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-amber-100 text-amber-700">Premium</span><span class="text-xs text-gold">★★★★☆</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Staircase Tile Work</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Stair tile pattern and fitting</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Slip-resistant and elegant surface</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Custom layouts for modern homes</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="marble-tiles" data-rating="4">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><rect x="34" y="34" width="52" height="52" rx="6" fill="#13335c" fill-opacity=".12" stroke="#13335c"/><path d="M44 46h32M44 60h32M44 74h32" stroke="#0e888d" stroke-width="4" stroke-linecap="round"/></svg>
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-amber-100 text-amber-700">Premium</span><span class="text-xs text-gold">★★★★☆</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Bathroom Tile Work</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Bathroom wall and floor tiling</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Waterproof finishing</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Premium surface look</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="marble-tiles" data-rating="4">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><rect x="34" y="34" width="52" height="52" rx="6" fill="#13335c" fill-opacity=".12" stroke="#13335c"/><path d="M44 46h32M44 60h32M44 74h32" stroke="#0e888d" stroke-width="4" stroke-linecap="round"/></svg>
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-amber-100 text-amber-700">Premium</span><span class="text-xs text-gold">★★★★☆</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Outdoor Tile Work</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Terrace, balcony and courtyard tiles</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Weather-resistant finishing</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Strong and durable structure</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="false-ceiling" data-rating="4">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><path d="M34 40h52M40 46h40M40 72h40" stroke="#13335c" stroke-width="4" stroke-linecap="round"/><path d="M40 78v-8a8 8 0 0 1 8-8h24a8 8 0 0 1 8 8v8" stroke="#0e888d" stroke-width="4" stroke-linecap="round"/></svg>
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-slate-100 text-slate-700">Modern</span><span class="text-xs text-gold">★★★★☆</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">POP Ceiling</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Durable POP ceiling finish</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Smooth surface and neat design</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Custom shapes and patterns</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="false-ceiling" data-rating="4">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><path d="M34 40h52M40 46h40M40 72h40" stroke="#13335c" stroke-width="4" stroke-linecap="round"/><path d="M40 78v-8a8 8 0 0 1 8-8h24a8 8 0 0 1 8 8v8" stroke="#0e888d" stroke-width="4" stroke-linecap="round"/></svg>
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-slate-100 text-slate-700">Modern</span><span class="text-xs text-gold">★★★★☆</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Gypsum Ceiling</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Lightweight gypsum panel setup</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Clean and modern ceiling look</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Perfect for bedrooms and halls</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="false-ceiling" data-rating="4">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><path d="M34 40h52M40 46h40M40 72h40" stroke="#13335c" stroke-width="4" stroke-linecap="round"/><path d="M40 78v-8a8 8 0 0 1 8-8h24a8 8 0 0 1 8 8v8" stroke="#0e888d" stroke-width="4" stroke-linecap="round"/></svg>
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-slate-100 text-slate-700">Modern</span><span class="text-xs text-gold">★★★★☆</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Cove Lighting Ceiling</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Soft ambient ceiling lighting</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Integrated light profile setup</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Elegant and stylish look</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="false-ceiling" data-rating="4">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><path d="M34 40h52M40 46h40M40 72h40" stroke="#13335c" stroke-width="4" stroke-linecap="round"/><path d="M40 78v-8a8 8 0 0 1 8-8h24a8 8 0 0 1 8 8v8" stroke="#0e888d" stroke-width="4" stroke-linecap="round"/></svg>
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-slate-100 text-slate-700">Modern</span><span class="text-xs text-gold">★★★★☆</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Wooden False Ceiling</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Warm wood-finished ceiling panels</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Premium and decorative appeal</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Perfect for luxury interiors</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="false-ceiling" data-rating="4">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><path d="M34 40h52M40 46h40M40 72h40" stroke="#13335c" stroke-width="4" stroke-linecap="round"/><path d="M40 78v-8a8 8 0 0 1 8-8h24a8 8 0 0 1 8 8v8" stroke="#0e888d" stroke-width="4" stroke-linecap="round"/></svg>
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-slate-100 text-slate-700">Modern</span><span class="text-xs text-gold">★★★★☆</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Office Ceiling</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Professional design for offices</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Neat finish with lighting integration</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Clean and functional appearance</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="false-ceiling" data-rating="4">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><path d="M34 40h52M40 46h40M40 72h40" stroke="#13335c" stroke-width="4" stroke-linecap="round"/><path d="M40 78v-8a8 8 0 0 1 8-8h24a8 8 0 0 1 8 8v8" stroke="#0e888d" stroke-width="4" stroke-linecap="round"/></svg>
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-slate-100 text-slate-700">Modern</span><span class="text-xs text-gold">★★★★☆</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Modular Ceiling</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Modular ceiling layouts</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Flexible and modern finish</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Easy maintenance and repaint ability</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="false-ceiling" data-rating="4">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><path d="M34 40h52M40 46h40M40 72h40" stroke="#13335c" stroke-width="4" stroke-linecap="round"/><path d="M40 78v-8a8 8 0 0 1 8-8h24a8 8 0 0 1 8 8v8" stroke="#0e888d" stroke-width="4" stroke-linecap="round"/></svg>
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-slate-100 text-slate-700">Modern</span><span class="text-xs text-gold">★★★★☆</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Acoustic Ceiling</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Noise-reducing ceiling panels</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Ideal for offices and studios</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Modern finish with comfort</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="false-ceiling" data-rating="4">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><path d="M34 40h52M40 46h40M40 72h40" stroke="#13335c" stroke-width="4" stroke-linecap="round"/><path d="M40 78v-8a8 8 0 0 1 8-8h24a8 8 0 0 1 8 8v8" stroke="#0e888d" stroke-width="4" stroke-linecap="round"/></svg>
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-slate-100 text-slate-700">Modern</span><span class="text-xs text-gold">★★★★☆</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Repair & Renovation Ceiling</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Ceiling repair and renovation</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Fixing cracks, leaks and damage</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Restoration with fresh finish</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="cctv-locks" data-rating="5">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><rect x="40" y="38" width="40" height="34" rx="6" fill="#13335c" fill-opacity=".12" stroke="#13335c"/><circle cx="60" cy="54" r="8" fill="#0e888d"/><path d="M52 46V42a8 8 0 0 1 16 0v4" stroke="#0e888d" stroke-width="4" stroke-linecap="round"/></svg>
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-blue-100 text-blue-700">Secure</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">CCTV Installation</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Camera fitting and setup</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Indoor, outdoor and driveway coverage</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Night vision and recording support</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="cctv-locks" data-rating="5">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><rect x="40" y="38" width="40" height="34" rx="6" fill="#13335c" fill-opacity=".12" stroke="#13335c"/><circle cx="60" cy="54" r="8" fill="#0e888d"/><path d="M52 46V42a8 8 0 0 1 16 0v4" stroke="#0e888d" stroke-width="4" stroke-linecap="round"/></svg>
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-blue-100 text-blue-700">Secure</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Door Lock Fitting</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">New lock installation and replacement</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Safety and durability focused</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Home and office lock support</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="cctv-locks" data-rating="5">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><rect x="40" y="38" width="40" height="34" rx="6" fill="#13335c" fill-opacity=".12" stroke="#13335c"/><circle cx="60" cy="54" r="8" fill="#0e888d"/><path d="M52 46V42a8 8 0 0 1 16 0v4" stroke="#0e888d" stroke-width="4" stroke-linecap="round"/></svg>
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-blue-100 text-blue-700">Secure</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Smart Locks</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Digital and keyless lock installation</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Secure app-based control</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Modern home security upgrade</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="cctv-locks" data-rating="5">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><rect x="40" y="38" width="40" height="34" rx="6" fill="#13335c" fill-opacity=".12" stroke="#13335c"/><circle cx="60" cy="54" r="8" fill="#0e888d"/><path d="M52 46V42a8 8 0 0 1 16 0v4" stroke="#0e888d" stroke-width="4" stroke-linecap="round"/></svg>
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-blue-100 text-blue-700">Secure</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Intercom Setup</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Audio and video intercom installation</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Door entry communication setup</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Security for homes and offices</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="cctv-locks" data-rating="5">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><rect x="40" y="38" width="40" height="34" rx="6" fill="#13335c" fill-opacity=".12" stroke="#13335c"/><circle cx="60" cy="54" r="8" fill="#0e888d"/><path d="M52 46V42a8 8 0 0 1 16 0v4" stroke="#0e888d" stroke-width="4" stroke-linecap="round"/></svg>
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-blue-100 text-blue-700">Secure</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Security Camera Maintenance</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Camera cleaning and issue checks</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Connection and recording support</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Reliable ongoing maintenance</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="cctv-locks" data-rating="5">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><rect x="40" y="38" width="40" height="34" rx="6" fill="#13335c" fill-opacity=".12" stroke="#13335c"/><circle cx="60" cy="54" r="8" fill="#0e888d"/><path d="M52 46V42a8 8 0 0 1 16 0v4" stroke="#0e888d" stroke-width="4" stroke-linecap="round"/></svg>
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-blue-100 text-blue-700">Secure</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Gate Lock & Safety</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Gate lock and safety fitting</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Heavy-duty locking solution</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Extra protection for entrances</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="cctv-locks" data-rating="5">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><rect x="40" y="38" width="40" height="34" rx="6" fill="#13335c" fill-opacity=".12" stroke="#13335c"/><circle cx="60" cy="54" r="8" fill="#0e888d"/><path d="M52 46V42a8 8 0 0 1 16 0v4" stroke="#0e888d" stroke-width="4" stroke-linecap="round"/></svg>
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-blue-100 text-blue-700">Secure</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Access Control Setup</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Advanced access control system</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Keyless entry and monitoring</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Office and residential security</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
+
+          <div class="p-card" data-category="cctv-locks" data-rating="5">
+            <div class="img-wrap">
+              <svg viewBox="0 0 120 120" class="h-20 w-20" fill="none"><circle cx="60" cy="60" r="52" fill="#eef2ff"/><rect x="40" y="38" width="40" height="34" rx="6" fill="#13335c" fill-opacity=".12" stroke="#13335c"/><circle cx="60" cy="54" r="8" fill="#0e888d"/><path d="M52 46V42a8 8 0 0 1 16 0v4" stroke="#0e888d" stroke-width="4" stroke-linecap="round"/></svg>
+              <div class="overlay"><a href="contact.html" class="rounded-full bg-gold px-6 py-2.5 text-xs font-bold text-white shadow-xl">Book Now</a></div>
+            </div>
+            <div class="flex flex-col flex-1 p-5">
+              <div class="flex items-center justify-between"><span class="badge bg-blue-100 text-blue-700">Secure</span><span class="text-xs text-gold">★★★★★</span></div>
+              <h3 class="mt-3 font-bold text-navy dark:text-white">Alarm & Sensor Installation</h3>
+              <ul class="mt-3 list-disc space-y-2 pl-5">
+                <li class="text-sm text-slate-600 dark:text-slate-300">Alarm and sensor setup for security</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Entry, motion and window sensors</li>
+                <li class="text-sm text-slate-600 dark:text-slate-300">Added protection for homes and shops</li>
+              </ul>
+              <a href="contact.html" class="mt-4 block w-full rounded-full bg-gold py-2.5 text-center text-xs font-bold text-white shadow hover:bg-gold-dark">Book Now</a>
+            </div>
+          </div>
         </div>
 
         <!-- Empty state -->
@@ -465,7 +1515,7 @@
 
   </main>
 
-  <footer class="bg-navy-dark bg-[#061244] py-8 text-center text-xs text-white/40">
+  <footer class="bg-navy-dark bg-[#13335c] py-8 text-center text-xs text-white/40">
     <p>© 2026 LocalMistry. All rights reserved. | <a href="privacy-policy.html" class="hover:text-gold transition">Privacy Policy</a> · <a href="terms-condition.html" class="hover:text-gold transition">Terms</a></p>
   </footer>
 
@@ -537,8 +1587,6 @@
     document.getElementById('sort-select')?.addEventListener('change', function() {
       const cards = [...grid.querySelectorAll('.p-card:not(.hidden-card)')];
       cards.sort((a, b) => {
-        if (this.value === 'price-asc') return +a.dataset.price - +b.dataset.price;
-        if (this.value === 'price-desc') return +b.dataset.price - +a.dataset.price;
         if (this.value === 'rating') return +b.dataset.rating - +a.dataset.rating;
         return 0;
       });

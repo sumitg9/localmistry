@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO -->
-  <title>About Us | LocalMistry — India's Trusted Home Services Platform</title>
-  <meta name="description" content="Learn the story behind LocalMistry. We connect homeowners with verified, background-checked experts for plumbing, electrical, cleaning, carpentry and more. Transparent pricing since 2024." />
-  <meta name="keywords" content="about LocalMistry, home services India, verified professionals, electrician plumber near me, LocalMistry story, mission values" />
+  <title>About Us | LocalMistry — Direct Service Provider in Siliguri</title>
+  <meta name="description" content="Learn about LocalMistry, a direct service provider in Siliguri offering electrical, plumbing, cleaning, carpentry, appliance and maintenance services through our own departments and field teams." />
+  <meta name="keywords" content="about localmistry, direct service provider siliguri, electrician siliguri, plumber siliguri, carpenter siliguri, home service team siliguri" />
   <meta name="author" content="LocalMistry" />
   <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="IN-WB" />
+  <meta name="geo.placename" content="Siliguri" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="About Us | LocalMistry" />
@@ -18,9 +20,8 @@
   <meta property="og:image" content="images/carpenter/1.jpg" />
 
   <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
-  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon.png" />
+  <link rel="shortcut icon" href="images/logo/favicon.png" />
 
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,8 +36,8 @@
       theme: {
         extend: {
           colors: {
-            navy: { DEFAULT: '#0a1f5c', dark: '#061244', light: '#1a3a8f' },
-            gold: { DEFAULT: '#f5a623', light: '#fbbf24', dark: '#d97706' },
+            navy: { DEFAULT: '#13335c', dark: '#13335c', light: '#1f4f74' },
+            gold: { DEFAULT: '#0e888d', light: '#35a5aa', dark: '#0a6d71' },
             sky:  '#e8f0fe',
           },
           fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
@@ -46,15 +47,15 @@
   </script>
 
   <style>
-    :focus-visible { outline: 3px solid #f5a623; outline-offset: 3px; }
+    :focus-visible { outline: 3px solid #0e888d; outline-offset: 3px; }
 
     /* scrollbar */
     ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-thumb { background: #f5a623; border-radius: 99px; }
+    ::-webkit-scrollbar-thumb { background: #0e888d; border-radius: 99px; }
 
     /* Hero gradient (matching products) */
     .about-hero {
-      background: linear-gradient(135deg, #0a1f5c 0%, #1a3a8f 60%, #0a1f5c 100%);
+      background: linear-gradient(135deg, #13335c 0%, #1f4f74 60%, #13335c 100%);
       position: relative;
       overflow: hidden;
     }
@@ -93,7 +94,7 @@
       position: fixed;
       top: 0; left: 0;
       height: 3px;
-      background: linear-gradient(90deg, #f5a623, #fbbf24);
+      background: linear-gradient(90deg, #0e888d, #35a5aa);
       z-index: 9999;
       animation: loadBar .8s ease forwards;
     }
@@ -116,32 +117,29 @@
   <!-- ═══════════════════════════════════════════════
        NAVBAR
   ════════════════════════════════════════════════ -->
-  <header class="sticky top-0 z-50 bg-navy shadow-lg">
+  <header class="sticky top-0 z-50 bg-white shadow-lg">
     <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8"
          aria-label="Primary navigation">
 
       <!-- Logo -->
-      <a href="index.html" class="flex items-center gap-2" aria-label="LocalMistry home">
-        <img src="images/logo-60x60.png" alt="LocalMistry logo"
-             class="h-9 w-9 rounded-lg object-cover" width="36" height="36" />
-        <span class="text-lg font-extrabold text-white tracking-tight">
-          Local<span class="text-gold">Mistry</span>
-        </span>
+      <a href="index.html" class="flex items-center" aria-label="LocalMistry home">
+        <img src="images/logo/logo-horizontal.png" alt="LocalMistry logo"
+             class="h-9 w-auto object-contain" />
       </a>
 
       <!-- Desktop nav -->
       <div class="hidden items-center gap-6 lg:flex">
-        <a href="index.html"    class="text-sm font-medium text-white/80 transition hover:text-gold">Home</a>
-        <a href="services.html" class="text-sm font-medium text-white/80 transition hover:text-gold">Services</a>
-        <a href="products.html" class="text-sm font-medium text-white/80 transition hover:text-gold">Products</a>
-        <a href="aboutus.html"  class="text-sm font-semibold text-gold border-b-2 border-gold pb-0.5">About</a>
-        <a href="contact.html"  class="text-sm font-medium text-white/80 transition hover:text-gold">Contact</a>
+        <a href="index.html"    class="text-sm font-medium text-slate-700 transition hover:text-[#0e888d]">Home</a>
+        <a href="services.html" class="text-sm font-medium text-slate-700 transition hover:text-[#0e888d]">Services</a>
+        <a href="products.html" class="text-sm font-medium text-slate-700 transition hover:text-[#0e888d]">Products</a>
+        <a href="aboutus.html"  class="text-sm font-semibold text-[#0e888d] border-b-2 border-[#0e888d] pb-0.5">About</a>
+        <a href="contact.html"  class="text-sm font-medium text-slate-700 transition hover:text-[#0e888d]">Contact</a>
       </div>
 
       <!-- Desktop CTA -->
       <div class="hidden items-center gap-3 lg:flex">
         <button id="theme-toggle" type="button" aria-label="Toggle dark mode"
-                class="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20">
+                class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-700 transition hover:bg-slate-200">
           <svg id="icon-moon" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
           </svg>
@@ -159,7 +157,7 @@
       <!-- Mobile controls -->
       <div class="flex items-center gap-2 lg:hidden">
         <button id="theme-toggle-mob" type="button" aria-label="Toggle dark mode"
-                class="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white">
+                class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-700">
           <svg id="icon-moon-mob" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
           </svg>
@@ -169,7 +167,7 @@
           </svg>
         </button>
         <button id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"
-                class="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white">
+                class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-700">
           <svg id="ham-open" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
             <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
           </svg>
@@ -181,17 +179,17 @@
     </nav>
 
     <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden border-t border-white/10 bg-navy px-4 pb-5 pt-3 lg:hidden">
+    <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white px-4 pb-5 pt-3 lg:hidden">
       <ul class="space-y-1">
-        <li><a href="index.html"    class="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-gold">Home</a></li>
-        <li><a href="services.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-gold">Services</a></li>
-        <li><a href="products.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-gold">Products</a></li>
-        <li><a href="aboutus.html"  class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-gold bg-white/10">About</a></li>
-        <li><a href="contact.html"  class="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-gold">Contact</a></li>
+        <li><a href="index.html"    class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-[#0e888d]">Home</a></li>
+        <li><a href="services.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-[#0e888d]">Services</a></li>
+        <li><a href="products.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-[#0e888d]">Products</a></li>
+        <li><a href="aboutus.html"  class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-[#0e888d] bg-slate-100">About</a></li>
+        <li><a href="contact.html"  class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-[#0e888d]">Contact</a></li>
       </ul>
       <div class="mt-4 flex gap-3">
-        <a href="contact.html" class="flex-1 rounded-full border border-gold py-2.5 text-center text-sm font-semibold text-gold">Login</a>
-        <a href="contact.html" class="flex-1 rounded-full bg-gold py-2.5 text-center text-sm font-semibold text-white">Get a Quote</a>
+        <a href="contact.html" class="flex-1 rounded-full border border-[#0e888d] py-2.5 text-center text-sm font-semibold text-[#0e888d]">Login</a>
+        <a href="contact.html" class="flex-1 rounded-full bg-[#0e888d] py-2.5 text-center text-sm font-semibold text-white">Get a Quote</a>
       </div>
     </div>
   </header>
@@ -216,7 +214,7 @@
           <span class="text-gold">LocalMistry</span>
         </h1>
         <p class="mt-4 max-w-2xl mx-auto text-base text-white/70 leading-relaxed">
-          We're building India's most trusted home services marketplace — one verified professional and one happy household at a time.
+          We are building a trusted direct service brand in Siliguri by delivering electrical, plumbing, cleaning, carpentry and maintenance work through our own departments, engineers, mechanics and mistry teams.
         </p>
 
         <!-- Hero stats -->
@@ -255,13 +253,13 @@
             </h2>
             <div class="mt-6 space-y-5 text-[15px] leading-relaxed text-slate-600 dark:text-slate-300">
               <p>
-                LocalMistry was founded in Mumbai by three engineers who were fed up with unreliable plumbers, no-shows, and hidden charges. We set out to build the platform we wished existed — one that treats both customers and professionals with respect.
+                LocalMistry was created to solve the everyday problem of unreliable home service visits. Instead of acting as a marketplace, we directly provide services through dedicated departments led by trained engineers, mechanics, electricians, plumbers, cleaners and mistry professionals.
               </p>
               <p>
-                In just two years we have grown from a WhatsApp group of 40 technicians to a full-stack marketplace serving 28 cities. Every professional on our platform is background-verified, skill-tested, and rated after every job.
+                We are proud to serve homes and businesses in Siliguri and nearby areas with punctual visits, transparent pricing and work carried out by our own field teams. Every job is handled with clear accountability from booking to completion.
               </p>
               <p>
-                Our obsession is simple: <span class="font-semibold text-navy dark:text-white">zero surprises</span> for the customer and <span class="font-semibold text-navy dark:text-white">fair earnings</span> for the expert.
+                Our focus is simple: <span class="font-semibold text-navy dark:text-white">quality workmanship</span>, <span class="font-semibold text-navy dark:text-white">honest service</span> and <span class="font-semibold text-navy dark:text-white">complete customer satisfaction</span>.
               </p>
             </div>
           </div>
@@ -460,7 +458,7 @@
   <!-- ═══════════════════════════════════════════════
        FOOTER
   ════════════════════════════════════════════════ -->
-  <footer class="bg-navy-dark bg-[#061244] py-8 text-center text-xs text-white/40">
+  <footer class="bg-navy-dark bg-[#13335c] py-8 text-center text-xs text-white/40">
     <p>© 2026 LocalMistry. All rights reserved. | <a href="privacy-policy.html" class="hover:text-gold transition">Privacy Policy</a> · <a href="terms-condition.html" class="hover:text-gold transition">Terms</a></p>
   </footer>
 
