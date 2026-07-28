@@ -117,84 +117,8 @@
   <!-- ═══════════════════════════════════════════════
        NAVBAR
   ════════════════════════════════════════════════ -->
-  <header class="sticky top-0 z-50 bg-white shadow-lg">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8"
-         aria-label="Primary navigation">
-
-      <!-- Logo -->
-      <a href="index.html" class="flex items-center" aria-label="LocalMistry home">
-        <img src="images/logo/logo-horizontal.png" alt="LocalMistry logo"
-             class="h-9 w-auto object-contain" />
-      </a>
-
-      <!-- Desktop nav -->
-      <div class="hidden items-center gap-6 lg:flex">
-        <a href="index.html"    class="text-sm font-medium text-slate-700 transition hover:text-[#0e888d]">Home</a>
-        <a href="/services" class="text-sm font-medium text-slate-700 transition hover:text-[#0e888d]">Services</a>
-        <a href="products.html" class="text-sm font-medium text-slate-700 transition hover:text-[#0e888d]">Products</a>
-        <a href="aboutus.html"  class="text-sm font-semibold text-[#0e888d] border-b-2 border-[#0e888d] pb-0.5">About</a>
-        <a href="contact.html"  class="text-sm font-medium text-slate-700 transition hover:text-[#0e888d]">Contact</a>
-      </div>
-
-      <!-- Desktop CTA -->
-      <div class="hidden items-center gap-3 lg:flex">
-        <button id="theme-toggle" type="button" aria-label="Toggle dark mode"
-                class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-700 transition hover:bg-slate-200">
-          <svg id="icon-moon" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-          </svg>
-          <svg id="icon-sun" class="hidden h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="4"/>
-            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
-          </svg>
-        </button>
-        <a href="contact.html"
-           class="rounded-full bg-gold px-5 py-2 text-sm font-semibold text-white shadow-md transition hover:bg-gold-dark hover:-translate-y-0.5">
-          + Get a Quote
-        </a>
-      </div>
-
-      <!-- Mobile controls -->
-      <div class="flex items-center gap-2 lg:hidden">
-        <button id="theme-toggle-mob" type="button" aria-label="Toggle dark mode"
-                class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-700">
-          <svg id="icon-moon-mob" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-          </svg>
-          <svg id="icon-sun-mob" class="hidden h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="4"/>
-            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
-          </svg>
-        </button>
-        <button id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"
-                class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-700">
-          <svg id="ham-open" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-          </svg>
-          <svg id="ham-close" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-          </svg>
-        </button>
-      </div>
-    </nav>
-
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white px-4 pb-5 pt-3 lg:hidden">
-      <ul class="space-y-1">
-        <li><a href="index.html"    class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-[#0e888d]">Home</a></li>
-        <li><a href="/services" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-[#0e888d]">Services</a></li>
-        <li><a href="products.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-[#0e888d]">Products</a></li>
-        <li><a href="aboutus.html"  class="block rounded-lg px-3 py-2.5 text-sm font-semibold text-[#0e888d] bg-slate-100">About</a></li>
-        <li><a href="contact.html"  class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-[#0e888d]">Contact</a></li>
-      </ul>
-      <div class="mt-4 flex gap-3">
-        <a href="contact.html" class="flex-1 rounded-full border border-[#0e888d] py-2.5 text-center text-sm font-semibold text-[#0e888d]">Login</a>
-        <a href="contact.html" class="flex-1 rounded-full bg-[#0e888d] py-2.5 text-center text-sm font-semibold text-white">Get a Quote</a>
-      </div>
-    </div>
-  </header>
-
-  <main>
+<?php $activePage = 'about'; $part='header'; include 'includes/header-footer.php'; ?>
+<main>
 
     <!-- ═══════════════════════════════════════════════
          HERO BANNER
@@ -204,7 +128,7 @@
 
         <!-- Breadcrumb -->
         <nav class="mb-6 flex items-center justify-center gap-2 text-xs text-white/60" aria-label="Breadcrumb">
-          <a href="index.html" class="hover:text-gold transition">Home</a>
+          <a href="/" class="hover:text-gold transition">Home</a>
           <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           <span class="text-gold font-semibold">About Us</span>
         </nav>
@@ -445,7 +369,7 @@
           <a href="/services" class="inline-flex items-center justify-center rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-navy shadow transition hover:bg-gold hover:text-white">
             Browse Services
           </a>
-          <a href="contact.html" class="inline-flex items-center justify-center rounded-full border border-white/70 px-8 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10">
+          <a href="/contact" class="inline-flex items-center justify-center rounded-full border border-white/70 px-8 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10">
             Talk to our team
           </a>
         </div>
@@ -453,14 +377,7 @@
       </div>
     </section>
 
-  </main>
-
-  <!-- ═══════════════════════════════════════════════
-       FOOTER
-  ════════════════════════════════════════════════ -->
-  <footer class="bg-navy-dark bg-[#13335c] py-8 text-center text-xs text-white/40">
-    <p>© 2026 LocalMistry. All rights reserved. | <a href="privacy-policy.html" class="hover:text-gold transition">Privacy Policy</a> · <a href="terms-condition.html" class="hover:text-gold transition">Terms</a></p>
-  </footer>
+<?php $part='footer'; include 'includes/header-footer.php'; ?>
 
   <!-- ═══════════════════════════════════════════════
        SCRIPTS
