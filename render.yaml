@@ -1,0 +1,6 @@
+services:
+    type: web
+    name: localmistry
+    dockerfilePath: Dockerfile
+    buildCommand: echo "Building Docker image"
+    startCommand: "apachectl -D FOREGROUND"
