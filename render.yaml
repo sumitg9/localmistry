@@ -1,5 +1,5 @@
 services:
-    type: web
+  - type: web
     name: localmistry
     dockerfilePath: Dockerfile
     buildCommand: echo "Building Docker image"
