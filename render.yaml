@@ -1,8 +1,0 @@
-services:
-  - type: web
-    name: localmistry
-    runtime: php
-    buildCommand: ""
-    envVars:
-      - key: PORT
-        value: 10000
